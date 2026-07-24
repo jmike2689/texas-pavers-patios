@@ -8,7 +8,6 @@
     <meta name="description"
         content="With over 17 years of experience, our in-house design team specializes in complete pool builds, specialty remodels, elegant pavers, and luxury outdoor living.">
 
-    <!-- Tailwind CSS for mobile-first, modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,11 +23,7 @@
             }
         }
     </script>
-
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS for Luxury Reveal Animations & Carousel -->
     <style>
         .reveal {
             transform: translateY(40px);
@@ -40,103 +35,59 @@
             transform: translateY(0);
             opacity: 1;
         }
-
-        /* Carousel Hide Scrollbar */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
     </style>
-
-    <!-- JSON-LD Schema Markup (@graph structure) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "HomeAndConstructionBusiness",
-          "@id": "https://texaspaverspatios.com/#business",
-          "name": "Texas Pavers & Patios",
-          "url": "https://texaspaverspatios.com",
-          "image": "https://images.unsplash.com/photo-1576013551627-11dc3664dd4f?auto=format&fit=crop&w=1920&q=80",
-          "description": "Specializing in complete pool builds, ground-up remodels, coping, plaster, and elegant pavers. In-house design team delivering luxury outdoor living.",
-          "telephone": "210-374-2779",
-          "email": "texaspaverspatios@gmail.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "San Antonio",
-            "addressRegion": "TX",
-            "addressCountry": "US"
-          },
-          "areaServed": [
-            "San Antonio", "Helotes", "Boerne", "Stone Oak", "Schertz", "Converse", "Cibolo", "New Braunfels", "Live Oak"
-          ],
-          "founder": {
-            "@type": "Person",
-            "name": "Martin Gonzalez"
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://texaspaverspatios.com/#website",
-          "url": "https://texaspaverspatios.com",
-          "name": "Texas Pavers & Patios",
-          "publisher": {
-            "@id": "https://texaspaverspatios.com/#business"
-          }
-        }
-      ]
-    }
-    </script>
 </head>
 
 <body class="bg-darker text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
 
-    <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pavers <span
-                            class="text-gold">& Patios</span></span>
+                    <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pavers
+                        <span class="text-gold">& Patios</span></a>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center text-sm tracking-wide uppercase font-semibold">
-                    <a href="#services" class="text-gray-300 hover:text-gold transition">Expertise</a>
-                    <a href="#process" class="text-gray-300 hover:text-gold transition">Our Process</a>
-                    <a href="#portfolio" class="text-gray-300 hover:text-gold transition">Portfolio</a>
+                <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
+                    <a href="#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
+                    <a href="#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
+
+                    <div class="relative group mr-8">
+                        <button
+                            class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            Portfolio <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-48 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#portfolio"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">All
+                                Categories</a>
+                            <a href="pools.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pools</a>
+                            <a href="pavers.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
+                            <a href="remodels.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
+                            <a href="concrete.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Concrete</a>
+                        </div>
+                    </div>
+
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
                     <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
-                        rel="noopener noreferrer" class="text-gray-400 hover:text-blue-500 transition text-xl"><i
+                        rel="noopener noreferrer" class="text-gray-400 hover:text-[#1877F2] transition text-xl ml-8"><i
                             class="fa-brands fa-facebook"></i></a>
-                </div>
-                <div class="hidden md:flex">
-                    <a href="tel:2103742779" class="text-gold font-bold text-lg hover:text-white transition"><i
-                            class="fa-solid fa-phone mr-2"></i>
-                        210-374-2779</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="relative h-[85vh] flex items-center justify-center">
-        <!-- Local Video Background -->
         <div class="absolute inset-0 z-0">
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
                 <source src="HeroVideo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="absolute inset-0 bg-black opacity-70"></div>
         </div>
-
-        <!-- Hero Content -->
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16 reveal active">
             <h1
                 class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight shadow-sm leading-tight">
@@ -145,7 +96,6 @@
             <p class="text-xl md:text-2xl text-gray-200 mb-6 font-light italic border-b border-gold pb-6 inline-block">
                 "Quality That Remains After the Price Is Forgotten"
             </p>
-
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-6">
                 <a href="#contact"
                     class="w-full sm:w-auto px-8 py-4 bg-gold hover:bg-goldHover text-black font-bold rounded-sm text-lg transition shadow-[0_0_20px_rgba(212,175,55,0.3)] uppercase tracking-wider">
@@ -159,20 +109,17 @@
         </div>
     </header>
 
-    <!-- In-House Design & Intro Banner -->
     <div class="bg-gold text-black py-16 reveal">
         <div class="max-w-5xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-extrabold uppercase tracking-wide mb-4">Ground-Up Construction & Remodeling</h2>
             <p class="text-lg md:text-xl font-medium leading-relaxed">
                 With over 17 years of experience, we bring architectural vision to life. Featuring an <strong>in-house
                     design team</strong>, we sketch, plan, and engineer custom pools, complete remodels, and luxury
-                paver decks tailored exactly to your vision. From custom tile lines and plaster to state-of-the-art
-                retaining walls—we control the quality from day one.
+                paver decks tailored exactly to your vision.
             </p>
         </div>
     </div>
 
-    <!-- Comprehensive Services Section -->
     <section id="services" class="py-24 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -182,7 +129,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <!-- Pools -->
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -198,7 +144,6 @@
                     </ul>
                 </div>
 
-                <!-- Remodels -->
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -214,7 +159,6 @@
                     </ul>
                 </div>
 
-                <!-- Hardscaping -->
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group xl:col-span-1 md:col-span-2">
                     <i
@@ -233,7 +177,6 @@
         </div>
     </section>
 
-    <!-- The Build Process -->
     <section id="process" class="py-24 bg-black border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -243,9 +186,7 @@
                 <p class="text-gray-400 text-lg">Transparency at every phase. Here is how we take your backyard from
                     concept to completion.</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Step 1 -->
                 <div
                     class="bg-dark p-6 border border-gray-800 rounded-sm text-center relative group hover:border-gold transition">
                     <div
@@ -257,8 +198,6 @@
                     <p class="text-gray-500 text-sm">Our in-house team drafts a custom 3D design and handles all
                         necessary city permits.</p>
                 </div>
-
-                <!-- Step 2 -->
                 <div
                     class="bg-dark p-6 border border-gray-800 rounded-sm text-center relative group hover:border-gold transition mt-8 md:mt-0">
                     <div
@@ -270,8 +209,6 @@
                     <p class="text-gray-500 text-sm">We carefully shape the terrain, excavating the exact footprint of
                         your new pool.</p>
                 </div>
-
-                <!-- Step 3 -->
                 <div
                     class="bg-dark p-6 border border-gray-800 rounded-sm text-center relative group hover:border-gold transition mt-8 lg:mt-0">
                     <div
@@ -283,8 +220,6 @@
                     <p class="text-gray-500 text-sm">A highly engineered steel rebar cage is tied, and all hydraulic
                         plumbing lines are laid.</p>
                 </div>
-
-                <!-- Step 4 -->
                 <div
                     class="bg-dark p-6 border border-gray-800 rounded-sm text-center relative group hover:border-gold transition mt-8 lg:mt-0">
                     <div
@@ -295,8 +230,6 @@
                     <p class="text-gray-500 text-sm">The concrete shell is shot, and we begin installing custom coping,
                         tile, and paver decking.</p>
                 </div>
-
-                <!-- Step 5 -->
                 <div
                     class="bg-dark p-6 border border-gray-800 rounded-sm text-center relative group hover:border-gold transition mt-8 lg:mt-0">
                     <div
@@ -312,102 +245,74 @@
         </div>
     </section>
 
-    <!-- Large Auto-Playing Image Carousel -->
     <section id="portfolio" class="py-24 bg-darker">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-4 uppercase tracking-wide">Our <span
-                        class="text-gold">Portfolio</span></h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 uppercase tracking-wide">Project <span
+                        class="text-gold">Galleries</span></h2>
                 <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
-                <p class="text-gray-400 text-lg">A curated gallery of complete pool builds, precision remodels, and
-                    luxury pavers.</p>
+                <p class="text-gray-400 text-lg">Select a category below to explore our extensive portfolio of custom
+                    work.</p>
             </div>
 
-            <!-- Carousel Container -->
-            <div
-                class="relative w-full h-[50vh] md:h-[70vh] overflow-hidden rounded-sm border-2 border-gray-800 shadow-[0_0_30px_rgba(0,0,0,0.5)] group">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="pools.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                    <img src="images/pools/pool-1.jpg" alt="Pools Portfolio"
+                        class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3
+                            class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition">
+                            Pools</h3>
+                    </div>
+                </a>
 
-                <!-- Inner Track -->
-                <div id="carouselTrack" class="flex w-full h-full transition-transform duration-700 ease-in-out">
-                    <!-- Images will be injected here by JS -->
-                </div>
+                <a href="pavers.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                    <img src="images/pavers/paver-1.jpg" alt="Pavers Portfolio"
+                        class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3
+                            class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition">
+                            Pavers</h3>
+                    </div>
+                </a>
 
-                <!-- Gradient Overlays for readability -->
-                <div
-                    class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
-                </div>
+                <a href="remodels.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                    <img src="images/remodels/after1.jpg" alt="Remodels Portfolio"
+                        class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3
+                            class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition">
+                            Remodels</h3>
+                    </div>
+                </a>
 
-                <!-- Controls -->
-                <button id="prevBtn"
-                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black w-12 h-12 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 backdrop-blur-sm border border-white/20 z-10">
-                    <i class="fa-solid fa-chevron-left text-xl"></i>
-                </button>
-                <button id="nextBtn"
-                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-gold text-white hover:text-black w-12 h-12 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 backdrop-blur-sm border border-white/20 z-10">
-                    <i class="fa-solid fa-chevron-right text-xl"></i>
-                </button>
+                <a href="concrete.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                    <img src="images/concrete/concrete-1.jpg" alt="Concrete Portfolio"
+                        class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3
+                            class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition">
+                            Concrete</h3>
+                    </div>
+                </a>
             </div>
 
-            <!-- Carousel JavaScript -->
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const track = document.getElementById('carouselTrack');
-                    const totalImages = 28;
-
-                    // Inject images dynamically
-                    for (let i = 1; i <= totalImages; i++) {
-                        const imgDiv = document.createElement('div');
-                        imgDiv.className = 'w-full h-full flex-shrink-0 relative';
-                        imgDiv.innerHTML = `<img src="images/pool-${i}.jpg" alt="Texas Pavers and Patios Custom Work ${i}" class="w-full h-full object-cover">`;
-                        track.appendChild(imgDiv);
-                    }
-
-                    let currentIndex = 0;
-                    let interval;
-
-                    const updateSlide = () => {
-                        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    };
-
-                    const nextSlide = () => {
-                        currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
-                        updateSlide();
-                    };
-
-                    const prevSlide = () => {
-                        currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
-                        updateSlide();
-                    };
-
-                    // Manual Controls
-                    document.getElementById('nextBtn').addEventListener('click', () => {
-                        nextSlide();
-                        resetInterval();
-                    });
-
-                    document.getElementById('prevBtn').addEventListener('click', () => {
-                        prevSlide();
-                        resetInterval();
-                    });
-
-                    // Auto-play every 6 seconds
-                    const startInterval = () => {
-                        interval = setInterval(nextSlide, 6000);
-                    };
-
-                    const resetInterval = () => {
-                        clearInterval(interval);
-                        startInterval();
-                    };
-
-                    // Start the carousel
-                    startInterval();
-                });
-            </script>
+            <div class="text-center mt-16 pt-8 reveal">
+                <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Want to see more of our work?
+                </h3>
+                <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white font-bold rounded-sm text-lg transition uppercase tracking-wider">
+                    <i class="fa-brands fa-facebook mr-3 text-2xl"></i> View Full Archive on Facebook
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Map & Location Section -->
     <section id="location" class="py-24 bg-black border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
@@ -416,7 +321,6 @@
                             class="text-gold">Location</span></h2>
                     <p class="text-gray-400 mb-8 text-lg">Proudly based in San Antonio, delivering uncompromising
                         quality to our neighbors and the surrounding communities.</p>
-
                     <div class="flex items-start mb-6">
                         <i class="fa-solid fa-location-dot text-gold text-2xl mt-1 mr-4"></i>
                         <div>
@@ -424,7 +328,6 @@
                             <p class="text-gray-400 mt-1">San Antonio, TX<br>and Surrounding Areas</p>
                         </div>
                     </div>
-
                     <div class="flex items-start mb-6">
                         <i class="fa-solid fa-envelope text-gold text-2xl mt-1 mr-4"></i>
                         <div>
@@ -433,9 +336,8 @@
                                 class="text-gray-400 hover:text-gold transition mt-1 block">texaspaverspatios@gmail.com</a>
                         </div>
                     </div>
-
                     <div class="flex items-start">
-                        <i class="fa-brands fa-facebook text-blue-500 text-2xl mt-1 mr-4"></i>
+                        <i class="fa-brands fa-facebook text-[#1877F2] text-2xl mt-1 mr-4"></i>
                         <div>
                             <h4 class="text-white font-bold text-xl">Follow Us</h4>
                             <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d"
@@ -445,8 +347,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Google Maps Embed -->
                 <div
                     class="w-full lg:w-2/3 h-[400px] border-2 border-gray-800 rounded-sm overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.05)]">
                     <iframe src="https://maps.google.com/maps?q=San+Antonio,+TX&t=&z=12&ie=UTF8&iwloc=&output=embed"
@@ -457,7 +357,6 @@
         </div>
     </section>
 
-    <!-- Lead Generation Contact Form Section -->
     <section id="contact" class="py-24 bg-dark relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
             <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
@@ -469,7 +368,6 @@
                             class="text-gold font-bold hover:text-white transition">210-374-2779</a> or submitting your
                         project details below.</p>
                 </div>
-
                 <form id="leadForm" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -498,74 +396,14 @@
                             class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm"></textarea>
                     </div>
                     <button type="submit"
-                        class="w-full bg-gold hover:bg-goldHover text-black font-extrabold py-5 rounded-sm text-lg transition uppercase tracking-widest shadow-lg">
-                        Get My Free Estimate
-                    </button>
-                    <!-- Success/Error Message Container -->
+                        class="w-full bg-gold hover:bg-goldHover text-black font-extrabold py-5 rounded-sm text-lg transition uppercase tracking-widest shadow-lg">Get
+                        My Free Estimate</button>
                     <div id="formStatus" class="hidden mt-4 text-center font-bold text-lg"></div>
                 </form>
-
-                <!-- Javascript to handle the form submission -->
-                <script>
-                    document.getElementById('leadForm').addEventListener('submit', async function (e) {
-                        e.preventDefault(); // Prevents the page from reloading
-
-                        const form = e.target;
-                        const submitBtn = form.querySelector('button[type="submit"]');
-                        const statusDiv = document.getElementById('formStatus');
-
-                        // Change button state to show it's working
-                        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
-                        submitBtn.disabled = true;
-                        submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
-                        statusDiv.classList.add('hidden');
-
-                        // Gather the data
-                        const formData = {
-                            name: form.name.value,
-                            phone: form.phone.value,
-                            email: form.email.value,
-                            message: form.message.value
-                        };
-
-                        try {
-                            // Send data to our Vercel Serverless Function
-                            const response = await fetch('/api/contact', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(formData)
-                            });
-
-                            if (response.ok) {
-                                // Success!
-                                statusDiv.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Success! Your request has been sent.';
-                                statusDiv.className = 'mt-6 text-center font-bold text-lg text-green-500';
-                                form.reset(); // Clear the form
-                            } else {
-                                // API Error
-                                statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Something went wrong. Please try again.';
-                                statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
-                            }
-                        } catch (error) {
-                            // Network Error
-                            statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Unable to connect. Please check your internet and try again.';
-                            statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
-                        } finally {
-                            // Reset button state
-                            submitBtn.innerHTML = 'Get My Free Estimate';
-                            submitBtn.disabled = false;
-                            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
-                            statusDiv.classList.remove('hidden');
-                        }
-                    });
-                </script>
             </div>
         </div>
     </section>
 
-    <!-- SEO Footprint & Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -586,47 +424,60 @@
                                     class="fa-solid fa-envelope w-5 text-gold"></i> texaspaverspatios@gmail.com</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d"
                                 target="_blank" rel="noopener noreferrer" class="hover:text-gold transition"><i
-                                    class="fa-brands fa-facebook w-5 text-blue-500"></i> Follow us on Facebook</a></li>
+                                    class="fa-brands fa-facebook w-5 text-[#1877F2]"></i> Follow us on Facebook</a></li>
                     </ul>
                 </div>
-
-                <!-- SEO Local Service Area Footprint -->
                 <div>
                     <h3 class="text-lg font-bold text-white mb-4 uppercase">Proudly Servicing</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">
-                        San Antonio, Helotes, Boerne, Stone Oak, Schertz, Converse, Cibolo, New Braunfels, and Live Oak.
-                    </p>
+                    <p class="text-gray-500 text-sm leading-relaxed">San Antonio, Helotes, Boerne, Stone Oak, Schertz,
+                        Converse, Cibolo, New Braunfels, and Live Oak.</p>
                 </div>
             </div>
-
             <div
                 class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
                 <p>© 2026 Texas Pavers & Patios. All Rights Reserved.</p>
-                <p class="mt-4 md:mt-0">
-                    Designed & Engineered by <a href="https://prosynctech.dev" target="_blank" rel="noopener noreferrer"
-                        class="text-gold hover:text-white transition font-semibold">ProSync
-                        Tech Solutions</a>
-                </p>
+                <p class="mt-4 md:mt-0">Designed & Engineered by <a href="https://prosynctech.dev" target="_blank"
+                        rel="noopener noreferrer" class="text-gold hover:text-white transition font-semibold">ProSync
+                        Tech Solutions</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Reveal Script for Scroll Animations -->
     <script>
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
+                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
             }
         }
-        window.addEventListener("scroll", reveal);
-        // Trigger once on load to catch elements already in view
-        reveal();
+        window.addEventListener("scroll", reveal); reveal();
+
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const statusDiv = document.getElementById('formStatus');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+            statusDiv.classList.add('hidden');
+            const formData = { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value };
+            try {
+                const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
+                if (response.ok) {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Success! Your request has been sent.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-green-500';
+                    form.reset();
+                } else {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Something went wrong. Please try again.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Unable to connect. Please try again.';
+                statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+            } finally { submitBtn.innerHTML = 'Get My Free Estimate'; submitBtn.disabled = false; }
+        });
     </script>
 </body>
 

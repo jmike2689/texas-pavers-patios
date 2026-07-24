@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pool Builds | Texas Pavers & Patios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { gold: '#D4AF37', goldHover: '#C5A030', dark: '#111111', darker: '#0a0a0a' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            transform: translateY(40px);
+            opacity: 0;
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .masonry {
+            column-count: 1;
+            column-gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            top: 50%;
+            transform: translateY(-50%);
+            position: relative;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+
+        .lightbox-close:hover {
+            color: #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-gray-200 font-sans antialiased">
+
+    <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pavers
+                        <span class="text-gold">& Patios</span></a>
+                </div>
+                <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
+                    <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
+                    <a href="index.html#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
+
+                    <div class="relative group mr-8">
+                        <button
+                            class="text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            Portfolio <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-48 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="index.html#portfolio"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">All
+                                Categories</a>
+                            <a href="pools.html"
+                                class="block px-4 py-3 text-sm text-gold hover:bg-dark transition border-b border-gray-800">Pools</a>
+                            <a href="pavers.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
+                            <a href="remodels.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
+                            <a href="concrete.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Concrete</a>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-black py-20 border-b border-gray-800 text-center reveal">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Custom <span
+                    class="text-gold">Pool Builds</span></h1>
+            <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                From 3D conceptual design to the final drop of water, our in-house team engineers luxury pools built for
+                longevity. Browse our recent ground-up installations below to see the uncompromising quality we bring to
+                every backyard.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="masonry" id="galleryGrid">
+            </div>
+
+            <div class="text-center mt-20 pt-16 border-t border-gray-800 reveal">
+                <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Want to see more of our work?
+                </h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">We are constantly updating our portfolio with our latest
+                    custom builds, remodels, and hardscaping projects.</p>
+                <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white font-bold rounded-sm text-lg transition uppercase tracking-wider">
+                    <i class="fa-brands fa-facebook mr-3 text-2xl"></i> View Full Archive on Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <section id="contact" class="py-24 bg-dark relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
+            <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-white mb-3 uppercase tracking-wide">Request a Free Estimate <span
+                            class="text-gold">& Design Consultation</span></h2>
+                    <p class="text-gray-400">Stop dreaming and start building. Connect directly with our in-house design
+                        team by calling <a href="tel:2103742779"
+                            class="text-gold font-bold hover:text-white transition">210-374-2779</a> or submitting your
+                        project details below.</p>
+                </div>
+                <form id="leadForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Full
+                                Name</label>
+                            <input type="text" name="name" required
+                                class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Phone
+                                Number</label>
+                            <input type="tel" name="phone" required
+                                class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Email
+                            Address</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Project
+                            Vision (Pool Build, Remodel, Pavers, etc.)</label>
+                        <textarea name="message" rows="5" required
+                            class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gold hover:bg-goldHover text-black font-extrabold py-5 rounded-sm text-lg transition uppercase tracking-widest shadow-lg">Get
+                        My Free Estimate</button>
+                    <div id="formStatus" class="hidden mt-4 text-center font-bold text-lg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Texas Pavers <span
+                            class="text-gold">& Patios</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Quality That Remains After the Price Is Forgotten. Locally
+                        trusted experts in luxury outdoor living, turnkey pool construction, and architectural remodels.
+                    </p>
+                    <p class="text-gray-400 text-sm">Owner: Martin Gonzalez</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tel:2103742779" class="hover:text-gold transition"><i
+                                    class="fa-solid fa-phone w-5 text-gold"></i> 210-374-2779</a></li>
+                        <li><a href="mailto:texaspaverspatios@gmail.com" class="hover:text-gold transition"><i
+                                    class="fa-solid fa-envelope w-5 text-gold"></i> texaspaverspatios@gmail.com</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d"
+                                target="_blank" rel="noopener noreferrer" class="hover:text-gold transition"><i
+                                    class="fa-brands fa-facebook w-5 text-[#1877F2]"></i> Follow us on Facebook</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">Proudly Servicing</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">San Antonio, Helotes, Boerne, Stone Oak, Schertz,
+                        Converse, Cibolo, New Braunfels, and Live Oak.</p>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+                <p>© 2026 Texas Pavers & Patios. All Rights Reserved.</p>
+                <p class="mt-4 md:mt-0">Designed & Engineered by <a href="https://prosynctech.dev" target="_blank"
+                        rel="noopener noreferrer" class="text-gold hover:text-white transition font-semibold">ProSync
+                        Tech Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById('galleryGrid');
+            const totalImages = 15;
+            for (let i = 1; i <= totalImages; i++) {
+                grid.innerHTML += `
+                    <div class="masonry-item relative group overflow-hidden rounded-sm bg-dark border border-gray-800 cursor-pointer" onclick="openLightbox('images/pools/pool-${i}.jpg')">
+                        <img src="images/pools/pool-${i}.jpg" alt="Custom Pool Build ${i}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                            <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        function openLightbox(src) { lightbox.style.display = "block"; lightboxImg.src = src; }
+        function closeLightbox() { lightbox.style.display = "none"; }
+        lightbox.addEventListener('click', function (e) { if (e.target !== lightboxImg) { closeLightbox(); } });
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const statusDiv = document.getElementById('formStatus');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+            statusDiv.classList.add('hidden');
+            const formData = { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value };
+            try {
+                const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
+                if (response.ok) {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Success! Your request has been sent.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-green-500';
+                    form.reset();
+                } else {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Something went wrong. Please try again.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Unable to connect. Please try again.';
+                statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+            } finally { submitBtn.innerHTML = 'Get My Free Estimate'; submitBtn.disabled = false; }
+        });
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                if (reveals[i].getBoundingClientRect().top < window.innerHeight - 100) reveals[i].classList.add("active");
+            }
+        }
+        window.addEventListener("scroll", reveal); reveal();
+    </script>
+</body>
+
+</html>
