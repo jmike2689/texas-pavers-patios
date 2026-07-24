@@ -40,17 +40,22 @@
 
 <body class="bg-darker text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
 
+    <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pavers
                         <span class="text-gold">& Patios</span></a>
                 </div>
+
+                <!-- Desktop Nav (Hidden on Mobile) -->
                 <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
                     <a href="#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
                     <a href="#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
 
+                    <!-- Dropdown Portfolio Menu -->
                     <div class="relative group mr-8">
                         <button
                             class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
@@ -77,10 +82,48 @@
                         rel="noopener noreferrer" class="text-gray-400 hover:text-[#1877F2] transition text-xl ml-8"><i
                             class="fa-brands fa-facebook"></i></a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="#services"
+                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Expertise</a>
+                <a href="#process"
+                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Our
+                    Process</a>
+
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    Portfolio</div>
+                <div class="pl-4 space-y-1">
+                    <a href="pools.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pools</a>
+                    <a href="pavers.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pavers</a>
+                    <a href="remodels.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
+                    <a href="concrete.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
+                </div>
+
+                <a href="#contact"
+                    class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
+                    a Free Estimate</a>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="relative h-[85vh] flex items-center justify-center">
         <div class="absolute inset-0 z-0">
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
@@ -120,6 +163,7 @@
         </div>
     </div>
 
+    <!-- Comprehensive Services Section -->
     <section id="services" class="py-24 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -177,6 +221,7 @@
         </div>
     </section>
 
+    <!-- The Build Process -->
     <section id="process" class="py-24 bg-black border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -245,6 +290,7 @@
         </div>
     </section>
 
+    <!-- Portfolio Directory Section -->
     <section id="portfolio" class="py-24 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -313,6 +359,7 @@
         </div>
     </section>
 
+    <!-- Map & Location Section -->
     <section id="location" class="py-24 bg-black border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
@@ -357,6 +404,7 @@
         </div>
     </section>
 
+    <!-- Lead Generation Contact Form Section -->
     <section id="contact" class="py-24 bg-dark relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
             <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
@@ -404,6 +452,7 @@
         </div>
     </section>
 
+    <!-- SEO Footprint & Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -444,6 +493,24 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {

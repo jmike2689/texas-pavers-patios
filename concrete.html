@@ -93,17 +93,22 @@
 
 <body class="bg-darker text-gray-200 font-sans antialiased">
 
+    <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pavers
                         <span class="text-gold">& Patios</span></a>
                 </div>
+
+                <!-- Desktop Nav (Hidden on Mobile) -->
                 <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
                     <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
                     <a href="index.html#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
 
+                    <!-- Dropdown Portfolio Menu -->
                     <div class="relative group mr-8">
                         <button
                             class="text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
@@ -127,6 +132,43 @@
 
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html#services"
+                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Expertise</a>
+                <a href="index.html#process"
+                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Our
+                    Process</a>
+
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    Portfolio</div>
+                <div class="pl-4 space-y-1">
+                    <a href="pools.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pools</a>
+                    <a href="pavers.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pavers</a>
+                    <a href="remodels.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
+                    <a href="concrete.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gold hover:bg-dark transition">Concrete</a>
+                </div>
+
+                <a href="#contact"
+                    class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
+                    a Free Estimate</a>
             </div>
         </div>
     </nav>
@@ -253,6 +295,23 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             const grid = document.getElementById('galleryGrid');
             const totalImages = 15;
@@ -272,6 +331,7 @@
         function openLightbox(src) { lightbox.style.display = "block"; lightboxImg.src = src; }
         function closeLightbox() { lightbox.style.display = "none"; }
         lightbox.addEventListener('click', function (e) { if (e.target !== lightboxImg) { closeLightbox(); } });
+
         document.getElementById('leadForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             const form = e.target;
@@ -296,6 +356,7 @@
                 statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
             } finally { submitBtn.innerHTML = 'Get My Free Estimate'; submitBtn.disabled = false; }
         });
+
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
