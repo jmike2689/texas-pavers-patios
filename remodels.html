@@ -44,7 +44,7 @@
             margin: auto;
             display: block;
             max-width: 90%;
-            max-height: 90vh;
+            max-height: 85vh;
             top: 50%;
             transform: translateY(-50%);
             position: relative;
@@ -66,6 +66,51 @@
         .lightbox-close:hover {
             color: #D4AF37;
         }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 12px 18px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 4px;
+            user-select: none;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+
+        .lightbox-nav:hover {
+            background: #D4AF37;
+            color: #000000;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.75);
+            padding: 6px 16px;
+            border-radius: 2px;
+            border: 1px solid #444;
+            z-index: 1001;
+        }
     </style>
 </head>
 
@@ -81,7 +126,7 @@
                         <span class="text-gold">& Patios</span></a>
                 </div>
 
-                <!-- Desktop Nav (Hidden on Mobile) -->
+                <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
                     <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
                     <a href="index.html#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
@@ -120,7 +165,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel (Hidden by default) -->
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu"
             class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
             <div class="px-4 pt-4 pb-6 space-y-2">
@@ -151,6 +196,7 @@
         </div>
     </nav>
 
+    <!-- Header Section -->
     <section class="bg-black py-20 border-b border-gray-800 text-center reveal">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Specialty <span
@@ -159,14 +205,16 @@
             <p class="text-gray-400 text-lg leading-relaxed">
                 Breathe new life into your existing pool. From structural repairs and equipment upgrades to premium
                 plastering and custom tile lines, we deliver expert craftsmanship to completely revitalize your space.
-                Browse our before-and-after transformations below to see the impact of our work.
+                Browse our transformations below to see the impact of our work.
             </p>
         </div>
     </section>
 
+    <!-- Gallery Grid Section -->
     <section class="py-24 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="flex flex-col gap-12" id="galleryGrid">
+                <!-- Javascript injects cards here -->
             </div>
 
             <div class="text-center mt-20 pt-16 border-t border-gray-800 reveal">
@@ -183,11 +231,18 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal Container -->
     <div id="lightbox" class="lightbox-modal">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span id="lightbox-prev" class="lightbox-nav lightbox-prev" onclick="prevImage()"><i
+                class="fa-solid fa-chevron-left"></i></span>
         <img class="lightbox-content" id="lightbox-img">
+        <span id="lightbox-next" class="lightbox-nav lightbox-next" onclick="nextImage()"><i
+                class="fa-solid fa-chevron-right"></i></span>
+        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-dark relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
             <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
@@ -236,6 +291,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -275,6 +331,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         // Mobile Menu Toggle Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -293,9 +350,118 @@
             });
         }
 
+        // Multiphoto Gallery Data Structure
+        const project1Gallery = [
+            // Before Images (4)
+            { src: 'images/remodels/project1/before1.jpg', title: 'Complete Renovation: Before (1 of 4)' },
+            { src: 'images/remodels/project1/before2.jpg', title: 'Complete Renovation: Before (2 of 4)' },
+            { src: 'images/remodels/project1/before3.jpg', title: 'Complete Renovation: Before (3 of 4)' },
+            { src: 'images/remodels/project1/before4.jpg', title: 'Complete Renovation: Before (4 of 4)' },
+            // After Images (7)
+            { src: 'images/remodels/project1/after1.jpg', title: 'Complete Renovation: After (1 of 7)' },
+            { src: 'images/remodels/project1/after2.jpg', title: 'Complete Renovation: After (2 of 7)' },
+            { src: 'images/remodels/project1/after3.jpg', title: 'Complete Renovation: After (3 of 7)' },
+            { src: 'images/remodels/project1/after4.jpg', title: 'Complete Renovation: After (4 of 7)' },
+            { src: 'images/remodels/project1/after5.jpg', title: 'Complete Renovation: After (5 of 7)' },
+            { src: 'images/remodels/project1/after6.jpg', title: 'Complete Renovation: After (6 of 7)' },
+            { src: 'images/remodels/project1/after7.jpg', title: 'Complete Renovation: After (7 of 7)' }
+        ];
+
+        const project2Gallery = [
+            // Before Images (6)
+            { src: 'images/remodels/project2/before1.jpg', title: 'Backyard Transformation: Before (1 of 6)' },
+            { src: 'images/remodels/project2/before2.jpg', title: 'Backyard Transformation: Before (2 of 6)' },
+            { src: 'images/remodels/project2/before3.jpg', title: 'Backyard Transformation: Before (3 of 6)' },
+            { src: 'images/remodels/project2/before4.jpg', title: 'Backyard Transformation: Before (4 of 6)' },
+            { src: 'images/remodels/project2/before5.jpg', title: 'Backyard Transformation: Before (5 of 6)' },
+            { src: 'images/remodels/project2/before6.jpg', title: 'Backyard Transformation: Before (6 of 6)' },
+            // After Images (11)
+            { src: 'images/remodels/project2/after1.jpg', title: 'Backyard Transformation: After (1 of 11)' },
+            { src: 'images/remodels/project2/after2.jpg', title: 'Backyard Transformation: After (2 of 11)' },
+            { src: 'images/remodels/project2/after3.jpg', title: 'Backyard Transformation: After (3 of 11)' },
+            { src: 'images/remodels/project2/after4.jpg', title: 'Backyard Transformation: After (4 of 11)' },
+            { src: 'images/remodels/project2/after5.jpg', title: 'Backyard Transformation: After (5 of 11)' },
+            { src: 'images/remodels/project2/after6.jpg', title: 'Backyard Transformation: After (6 of 11)' },
+            { src: 'images/remodels/project2/after7.jpg', title: 'Backyard Transformation: After (7 of 11)' },
+            { src: 'images/remodels/project2/after8.jpg', title: 'Backyard Transformation: After (8 of 11)' },
+            { src: 'images/remodels/project2/after9.jpg', title: 'Backyard Transformation: After (9 of 11)' },
+            { src: 'images/remodels/project2/after10.jpg', title: 'Backyard Transformation: After (10 of 11)' },
+            { src: 'images/remodels/project2/after11.jpg', title: 'Backyard Transformation: After (11 of 11)' }
+        ];
+
         document.addEventListener("DOMContentLoaded", () => {
             const grid = document.getElementById('galleryGrid');
-            const projects = [
+
+            // Flagship Card 1: Complete Renovation
+            let htmlContent = `
+                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl">
+                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Complete Renovation</h3>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+                        <!-- BEFORE Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project1Gallery, 0)">
+                            <img src="images/remodels/project1/before1.jpg" alt="Complete Renovation Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
+                                <span>Before</span> <span class="text-gold">(4 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- AFTER Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project1Gallery, 6)">
+                            <img src="images/remodels/project1/after3.jpg" alt="Complete Renovation After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
+                                <span>After</span> <span class="text-black/80">(7 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openGallery(project1Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
+                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (11 Photos)
+                    </button>
+                </div>
+            `;
+
+            // Flagship Card 2: Backyard Transformation
+            htmlContent += `
+                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl mt-4">
+                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Backyard Transformation</h3>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+                        <!-- BEFORE Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project2Gallery, 3)">
+                            <img src="images/remodels/project2/before4.jpg" alt="Backyard Transformation Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
+                                <span>Before</span> <span class="text-gold">(6 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- AFTER Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project2Gallery, 11)">
+                            <img src="images/remodels/project2/after6.jpg" alt="Backyard Transformation After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
+                                <span>After</span> <span class="text-black/80">(11 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openGallery(project2Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
+                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (17 Photos)
+                    </button>
+                </div>
+            `;
+
+            grid.innerHTML = htmlContent;
+
+            // Render standard 6 projects
+            const standardProjects = [
                 "Travertine Patio & Steps Upgrade",
                 "Raised Spa & Stone Veneer Transformation",
                 "Complete Pool & Retaining Wall Renovation",
@@ -303,14 +469,15 @@
                 "Pool Deck Expansion & Hardscaping",
                 "Pool & Spa Deck Resurfacing"
             ];
-            projects.forEach((projectName, index) => {
+
+            standardProjects.forEach((projectName, index) => {
                 let i = index + 1;
                 grid.innerHTML += `
-                    <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-lg">
+                    <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-lg mt-4">
                         <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">${projectName}</h3>
                         <div class="flex flex-col md:flex-row gap-4 md:gap-6">
                             <!-- BEFORE Image -->
-                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openLightbox('images/remodels/before${i}.jpg')">
+                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery([ {src: 'images/remodels/before${i}.jpg', title: '${projectName} - Before'}, {src: 'images/remodels/after${i}.jpg', title: '${projectName} - After'} ], 0)">
                                 <img src="images/remodels/before${i}.jpg" alt="Before: ${projectName}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
                                 <div class="absolute top-4 left-4 bg-black/80 text-white text-sm px-4 py-2 font-bold rounded-sm border border-gray-600 uppercase tracking-widest">Before</div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
@@ -319,7 +486,7 @@
                             </div>
                             
                             <!-- AFTER Image -->
-                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openLightbox('images/remodels/after${i}.jpg')">
+                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery([ {src: 'images/remodels/before${i}.jpg', title: '${projectName} - Before'}, {src: 'images/remodels/after${i}.jpg', title: '${projectName} - After'} ], 1)">
                                 <img src="images/remodels/after${i}.jpg" alt="After: ${projectName}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
                                 <div class="absolute top-4 left-4 bg-gold text-black text-sm px-4 py-2 font-bold rounded-sm uppercase tracking-widest shadow-md">After</div>
                                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
@@ -332,12 +499,73 @@
             });
         });
 
+        // Lightbox Functions with Multiphoto Gallery Support
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
-        function openLightbox(src) { lightbox.style.display = "block"; lightboxImg.src = src; }
-        function closeLightbox() { lightbox.style.display = "none"; }
-        lightbox.addEventListener('click', function (e) { if (e.target !== lightboxImg) { closeLightbox(); } });
+        const lightboxCaption = document.getElementById("lightbox-caption");
+        const lightboxPrev = document.getElementById("lightbox-prev");
+        const lightboxNext = document.getElementById("lightbox-next");
 
+        let activeGallery = [];
+        let currentIndex = 0;
+
+        function openGallery(galleryArray, startIndex = 0) {
+            activeGallery = galleryArray;
+            currentIndex = startIndex;
+            updateLightbox();
+            lightbox.style.display = "block";
+        }
+
+        function updateLightbox() {
+            if (activeGallery.length === 0) return;
+            const item = activeGallery[currentIndex];
+            lightboxImg.src = item.src;
+            lightboxCaption.innerText = item.title ? item.title : `Image ${currentIndex + 1} of ${activeGallery.length}`;
+
+            // Show/Hide navigation controls based on total photos
+            if (activeGallery.length > 1) {
+                lightboxPrev.style.display = "block";
+                lightboxNext.style.display = "block";
+            } else {
+                lightboxPrev.style.display = "none";
+                lightboxNext.style.display = "none";
+            }
+        }
+
+        function prevImage() {
+            if (activeGallery.length <= 1) return;
+            currentIndex = (currentIndex - 1 + activeGallery.length) % activeGallery.length;
+            updateLightbox();
+        }
+
+        function nextImage() {
+            if (activeGallery.length <= 1) return;
+            currentIndex = (currentIndex + 1) % activeGallery.length;
+            updateLightbox();
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+            activeGallery = [];
+        }
+
+        // Close when clicking empty dark backdrop
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard arrow navigation
+        document.addEventListener('keydown', function (e) {
+            if (lightbox.style.display === "block") {
+                if (e.key === "ArrowLeft") prevImage();
+                if (e.key === "ArrowRight") nextImage();
+                if (e.key === "Escape") closeLightbox();
+            }
+        });
+
+        // Lead form handler
         document.getElementById('leadForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             const form = e.target;
