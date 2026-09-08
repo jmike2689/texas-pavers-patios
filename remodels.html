@@ -389,6 +389,22 @@
             { src: 'images/remodels/project2/after11.jpg', title: 'Backyard Transformation: After (11 of 11)' }
         ];
 
+        const project3Gallery = [
+            // Before Images (2)
+            { src: 'images/remodels/project3/before1.jpg', title: 'Premium Pool Remodel: Before (1 of 2)' },
+            { src: 'images/remodels/project3/before2.jpg', title: 'Premium Pool Remodel: Before (2 of 2)' },
+            // After Images (9)
+            { src: 'images/remodels/project3/after1.jpg', title: 'Premium Pool Remodel: After (1 of 9)' },
+            { src: 'images/remodels/project3/after2.jpg', title: 'Premium Pool Remodel: After (2 of 9)' },
+            { src: 'images/remodels/project3/after3.jpg', title: 'Premium Pool Remodel: After (3 of 9)' },
+            { src: 'images/remodels/project3/after4.jpg', title: 'Premium Pool Remodel: After (4 of 9)' },
+            { src: 'images/remodels/project3/after5.jpg', title: 'Premium Pool Remodel: After (5 of 9)' },
+            { src: 'images/remodels/project3/after6.jpg', title: 'Premium Pool Remodel: After (6 of 9)' },
+            { src: 'images/remodels/project3/after7.jpg', title: 'Premium Pool Remodel: After (7 of 9)' },
+            { src: 'images/remodels/project3/after8.jpg', title: 'Premium Pool Remodel: After (8 of 9)' },
+            { src: 'images/remodels/project3/after9.jpg', title: 'Premium Pool Remodel: After (9 of 9)' }
+        ];
+
         document.addEventListener("DOMContentLoaded", () => {
             const grid = document.getElementById('galleryGrid');
 
@@ -454,6 +470,39 @@
                     </div>
                     <button onclick="openGallery(project2Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
                         <i class="fa-solid fa-images text-gold"></i> View Full Gallery (17 Photos)
+                    </button>
+                </div>
+            `;
+
+            // Flagship Card 3: Premium Pool Remodel (Newly Added)
+            htmlContent += `
+                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl mt-4">
+                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Premium Pool Remodel</h3>
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+                        <!-- BEFORE Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project3Gallery, 0)">
+                            <img src="images/remodels/project3/before1.jpg" alt="Premium Pool Remodel Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
+                                <span>Before</span> <span class="text-gold">(2 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- AFTER Flagship -->
+                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project3Gallery, 9)">
+                            <img src="images/remodels/project3/after8.jpg" alt="Premium Pool Remodel After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
+                                <span>After</span> <span class="text-black/80">(9 Photos)</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openGallery(project3Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
+                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (11 Photos)
                     </button>
                 </div>
             `;
