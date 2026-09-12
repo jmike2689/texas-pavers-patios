@@ -123,18 +123,20 @@
         </div>
     </nav>
 
-    <!-- Hero Section with after8.jpg -->
+    <!-- Hero Section (Tint Removed, Text Shadow Added) -->
     <header class="relative h-[85vh] flex items-center justify-center">
         <div class="absolute inset-0 z-0">
-            <img src="images/remodels/project3/after8.jpg" alt="Luxury Pool Remodel" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="HeroVideo.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16 reveal active">
-            <h1
-                class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight shadow-sm leading-tight">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 uppercase tracking-tight leading-tight"
+                style="text-shadow: 2px 4px 10px rgba(0,0,0,0.9), 0px 0px 20px rgba(0,0,0,0.7);">
                 Mastering the Art of <br><span class="text-gold">Luxury Pools & Patios</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-6 font-light italic border-b border-gold pb-6 inline-block">
+            <p class="text-xl md:text-2xl text-white mb-6 font-semibold italic border-b border-gold pb-6 inline-block"
+                style="text-shadow: 1px 2px 8px rgba(0,0,0,0.9);">
                 "Quality That Remains After the Price Is Forgotten"
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-6">
@@ -143,7 +145,7 @@
                     Request Your Free Estimate
                 </a>
                 <a href="#portfolio"
-                    class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white text-white hover:border-gold hover:text-gold font-bold rounded-sm text-lg transition uppercase tracking-wider">
+                    class="w-full sm:w-auto px-8 py-4 bg-black/60 backdrop-blur-sm border-2 border-white text-white hover:border-gold hover:text-gold font-bold rounded-sm text-lg transition uppercase tracking-wider">
                     View Portfolio
                 </a>
             </div>
@@ -161,7 +163,7 @@
         </div>
     </div>
 
-    <!-- Comprehensive Services Section -->
+    <!-- Comprehensive Services Section (2x2 Grid with Pool Demos) -->
     <section id="services" class="py-24 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -170,7 +172,7 @@
                 <div class="w-24 h-1 bg-gold mx-auto"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -202,7 +204,7 @@
                 </div>
 
                 <div
-                    class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group xl:col-span-1 md:col-span-2">
+                    class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
                         class="fa-brands fa-pagelines text-4xl text-gold mb-6 transform group-hover:scale-110 transition duration-500"></i>
                     <h3 class="text-2xl font-bold text-white mb-4 uppercase">Pavers & Outdoor Living</h3>
@@ -213,6 +215,21 @@
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Driveways & Custom Walkways</li>
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Retaining Walls & Concrete Site Work</li>
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Travertine, Marble, & Slate Finishes</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
+                    <i
+                        class="fa-solid fa-truck-monster text-4xl text-gold mb-6 transform group-hover:scale-110 transition duration-500"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4 uppercase">Pool Demolitions</h3>
+                    <p class="text-gray-400 text-sm mb-4">Safe, efficient, and complete pool removals. We handle
+                        everything from draining and breaking to backfilling and grading.</p>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Full & Partial Removals</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Concrete Breaking & Haul-Off</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Engineered Backfill & Compaction</li>
+                        <li><i class="fa-solid fa-check text-gold mr-2"></i> Final Grading & Site Restoration</li>
                     </ul>
                 </div>
             </div>
@@ -288,6 +305,60 @@
         </div>
     </section>
 
+    <!-- Client Reviews Section -->
+    <section id="reviews" class="py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 uppercase tracking-wide">Client <span
+                        class="text-gold">Testimonials</span></h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-gray-400 text-lg">Hear what our clients have to say about their backyard transformations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
+                    <div class="text-gold mb-4 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-6 leading-relaxed">"Martin and his team completely transformed our
+                        backyard. The attention to detail on the travertine pavers and the new pool finish exceeded our
+                        highest expectations. Highly recommend!"</p>
+                    <h4 class="text-white font-bold uppercase tracking-wider">- Sarah & James T.</h4>
+                </div>
+
+                <div
+                    class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
+                    <div class="text-gold mb-4 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-6 leading-relaxed">"We hired Texas Pools and Pavers for a massive
+                        concrete and retaining wall project. They showed up on time, kept the site clean, and the
+                        structural integrity is flawless."</p>
+                    <h4 class="text-white font-bold uppercase tracking-wider">- David M.</h4>
+                </div>
+
+                <div
+                    class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
+                    <div class="text-gold mb-4 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-6 leading-relaxed">"The in-house design team actually listened to
+                        what we wanted. From the 3D sketch to the final day of construction, the transparency and
+                        communication were unmatched."</p>
+                    <h4 class="text-white font-bold uppercase tracking-wider">- The Garcia Family</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Directory Section without dark tint -->
     <section id="portfolio" class="py-24 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
@@ -311,7 +382,7 @@
                 </a>
 
                 <a href="pavers.html" class="relative group h-80 overflow-hidden rounded-sm block">
-                    <img src="images/pavers/paver-1.jpg" alt="Pavers Portfolio"
+                    <img src="images/pavers/paver-17.jpg" alt="Pavers Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <h3
@@ -321,7 +392,7 @@
                 </a>
 
                 <a href="remodels.html" class="relative group h-80 overflow-hidden rounded-sm block">
-                    <img src="images/remodels/project1/after1.jpg" alt="Remodels Portfolio"
+                    <img src="images/remodels/project3/after8.jpg" alt="Remodels Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <h3
@@ -331,7 +402,7 @@
                 </a>
 
                 <a href="concrete.html" class="relative group h-80 overflow-hidden rounded-sm block">
-                    <img src="images/concrete/concrete-1.jpg" alt="Concrete Portfolio"
+                    <img src="images/concrete/concrete-12.jpg" alt="Concrete Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <h3

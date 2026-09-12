@@ -18,7 +18,7 @@ export default async function handler(req, res) {
             body: JSON.stringify({
                 from: 'leads@prosynctech.dev', // Your verified agency domain
                 to: 'texaspaverspatios@gmail.com', // The client's receiving email
-                subject: `New Lead: ${name} - Texas Pavers & Patios`,
+                subject: `New Lead: ${name} - Texas Pools and Pavers`,
                 html: `
           <div style="font-family: sans-serif; padding: 20px; color: #111;">
             <h2 style="color: #D4AF37; text-transform: uppercase;">New Consultation Request</h2>
