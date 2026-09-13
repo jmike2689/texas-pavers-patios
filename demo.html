@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Pavers & Outdoor Living | Texas Pools and Pavers</title>
+    <title>Pool Demolitions | Texas Pools and Pavers</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -92,6 +92,7 @@
 </head>
 
 <body class="bg-darker text-gray-200 font-sans antialiased">
+
     <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,13 +117,13 @@
                             <a href="pools.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pools</a>
                             <a href="pavers.html"
-                                class="block px-4 py-3 text-sm text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
                             <a href="remodels.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
                             <a href="concrete.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Concrete</a>
                             <a href="demo.html"
-                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Demolition</a>
+                                class="block px-4 py-3 text-sm text-gold hover:bg-dark transition">Demolition</a>
                         </div>
                     </div>
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
@@ -149,13 +150,13 @@
                     <a href="pools.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pools</a>
                     <a href="pavers.html"
-                        class="block px-3 py-2 rounded-sm text-base font-medium text-gold hover:bg-dark transition">Pavers</a>
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pavers</a>
                     <a href="remodels.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
                     <a href="concrete.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
                     <a href="demo.html"
-                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Demolition</a>
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gold hover:bg-dark transition">Demolition</a>
                 </div>
                 <a href="#contact"
                     class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
@@ -166,12 +167,12 @@
 
     <section class="bg-black py-20 border-b border-gray-800 text-center reveal">
         <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Luxury <span
-                    class="text-gold">Pavers & Hardscaping</span></h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Pool <span
+                    class="text-gold">Demolitions</span></h1>
             <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
             <p class="text-gray-400 text-lg leading-relaxed">
-                Elegant hardscaping serves as the perfect foundation for your outdoor resort. We specialize in precision
-                installation of high-end travertine, marble, slate, and custom paver pool decks and driveways.
+                Safe, efficient, and complete pool removals. From breaking and hauling to engineered backfill and final
+                site grading, we restore your property to a clean slate.
             </p>
         </div>
     </section>
@@ -303,12 +304,12 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             const grid = document.getElementById('galleryGrid');
-            const totalImages = 84;
+            const totalImages = 22;
             let htmlContent = "";
             for (let i = 1; i <= totalImages; i++) {
                 htmlContent += `
-                    <div class="relative group overflow-hidden rounded-sm bg-dark border border-gray-800 cursor-pointer h-72" onclick="openLightbox('images/pavers/paver-${i}.jpg')">
-                        <img src="images/pavers/paver-${i}.jpg" alt="Custom Pavers ${i}" loading="lazy" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                    <div class="relative group overflow-hidden rounded-sm bg-gray-900 animate-pulse border border-gray-800 cursor-pointer h-72" onclick="openLightbox('images/demo/demo-${i}.jpg')">
+                        <img src="images/demo/demo-${i}.jpg" alt="Pool Demolition ${i}" loading="lazy" onload="this.parentElement.classList.remove('animate-pulse')" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                             <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
                         </div>

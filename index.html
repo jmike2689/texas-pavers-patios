@@ -7,18 +7,12 @@
     <title>Texas Pools and Pavers | Luxury Pool Builds & Remodels San Antonio</title>
     <meta name="description"
         content="With over 17 years of experience, our in-house design team specializes in complete pool builds, specialty remodels, elegant pavers, and luxury outdoor living.">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        goldHover: '#C5A030',
-                        dark: '#111111',
-                        darker: '#0a0a0a'
-                    }
+                    colors: { gold: '#D4AF37', goldHover: '#C5A030', dark: '#111111', darker: '#0a0a0a' }
                 }
             }
         }
@@ -39,23 +33,17 @@
 </head>
 
 <body class="bg-darker text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
-
     <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pools
                         <span class="text-gold">and Pavers</span></a>
                 </div>
-
-                <!-- Desktop Nav (Hidden on Mobile) -->
                 <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
                     <a href="#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
                     <a href="#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
-
-                    <!-- Dropdown Portfolio Menu -->
                     <div class="relative group mr-8">
                         <button
                             class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
@@ -73,17 +61,16 @@
                             <a href="remodels.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
                             <a href="concrete.html"
-                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Concrete</a>
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Concrete</a>
+                            <a href="demo.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Demolition</a>
                         </div>
                     </div>
-
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
                     <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
                         rel="noopener noreferrer" class="text-gray-400 hover:text-[#1877F2] transition text-xl ml-8"><i
                             class="fa-brands fa-facebook"></i></a>
                 </div>
-
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition">
                         <i class="fa-solid fa-bars text-3xl"></i>
@@ -91,8 +78,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu Panel (Hidden by default) -->
         <div id="mobile-menu"
             class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
             <div class="px-4 pt-4 pb-6 space-y-2">
@@ -101,7 +86,6 @@
                 <a href="#process"
                     class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Our
                     Process</a>
-
                 <div
                     class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
                     Portfolio</div>
@@ -114,8 +98,9 @@
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
                     <a href="concrete.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
+                    <a href="demo.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Demolition</a>
                 </div>
-
                 <a href="#contact"
                     class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
                     a Free Estimate</a>
@@ -123,7 +108,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Tint Removed, Text Shadow Added) -->
+    <!-- Hero Section -->
     <header class="relative h-[85vh] flex items-center justify-center">
         <div class="absolute inset-0 z-0">
             <video autoplay loop muted playsinline class="w-full h-full object-cover">
@@ -163,7 +148,7 @@
         </div>
     </div>
 
-    <!-- Comprehensive Services Section (2x2 Grid with Pool Demos) -->
+    <!-- Comprehensive Services Section -->
     <section id="services" class="py-24 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -171,7 +156,6 @@
                         class="text-gold">Expertise</span></h2>
                 <div class="w-24 h-1 bg-gold mx-auto"></div>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
@@ -187,7 +171,6 @@
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Seamless Permitting Process</li>
                     </ul>
                 </div>
-
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -202,7 +185,6 @@
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Structural Repairs & Redesign</li>
                     </ul>
                 </div>
-
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -217,7 +199,6 @@
                         <li><i class="fa-solid fa-check text-gold mr-2"></i> Travertine, Marble, & Slate Finishes</li>
                     </ul>
                 </div>
-
                 <div
                     class="bg-darker border border-gray-800 hover:border-gold transition duration-500 p-8 rounded-sm group">
                     <i
@@ -315,7 +296,6 @@
                 <p class="text-gray-400 text-lg">Hear what our clients have to say about their backyard transformations.
                 </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div
                     class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
@@ -329,7 +309,6 @@
                         highest expectations. Highly recommend!"</p>
                     <h4 class="text-white font-bold uppercase tracking-wider">- Sarah & James T.</h4>
                 </div>
-
                 <div
                     class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
                     <div class="text-gold mb-4 text-xl">
@@ -342,7 +321,6 @@
                         structural integrity is flawless."</p>
                     <h4 class="text-white font-bold uppercase tracking-wider">- David M.</h4>
                 </div>
-
                 <div
                     class="bg-darker border border-gray-800 p-8 rounded-sm text-center relative hover:border-gold transition duration-500 shadow-lg">
                     <div class="text-gold mb-4 text-xl">
@@ -359,7 +337,7 @@
         </div>
     </section>
 
-    <!-- Portfolio Directory Section without dark tint -->
+    <!-- Portfolio Directory Section (Updated 5-Item Symmetrical Grid) -->
     <section id="portfolio" class="py-24 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="text-center mb-16">
@@ -370,8 +348,9 @@
                     work.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="pools.html" class="relative group h-80 overflow-hidden rounded-sm block">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                <!-- Top Row: 3 Items (Span 2 of 6 columns on Desktop) -->
+                <a href="pools.html" class="relative group h-80 overflow-hidden rounded-sm lg:col-span-2 block">
                     <img src="images/pools/pool-1.jpg" alt="Pools Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -381,7 +360,7 @@
                     </div>
                 </a>
 
-                <a href="pavers.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                <a href="pavers.html" class="relative group h-80 overflow-hidden rounded-sm lg:col-span-2 block">
                     <img src="images/pavers/paver-17.jpg" alt="Pavers Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -391,7 +370,9 @@
                     </div>
                 </a>
 
-                <a href="remodels.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                <!-- On tablets, this item spans full width to balance the 2-column layout. On Desktop, it sits in the top row. -->
+                <a href="remodels.html"
+                    class="relative group h-80 overflow-hidden rounded-sm md:col-span-2 lg:col-span-2 block">
                     <img src="images/remodels/project3/after8.jpg" alt="Remodels Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
@@ -401,13 +382,24 @@
                     </div>
                 </a>
 
-                <a href="concrete.html" class="relative group h-80 overflow-hidden rounded-sm block">
+                <!-- Bottom Row: 2 Items (Span 3 of 6 columns on Desktop so they are slightly wider and perfectly centered) -->
+                <a href="concrete.html" class="relative group h-80 overflow-hidden rounded-sm lg:col-span-3 block">
                     <img src="images/concrete/concrete-12.jpg" alt="Concrete Portfolio"
                         class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <h3
                             class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition bg-black/40 backdrop-blur-sm rounded-sm">
                             Concrete</h3>
+                    </div>
+                </a>
+
+                <a href="demo.html" class="relative group h-80 overflow-hidden rounded-sm lg:col-span-3 block">
+                    <img src="images/demo/demo-1.jpg" alt="Demolition Portfolio"
+                        class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3
+                            class="text-4xl font-extrabold text-white uppercase tracking-widest border-2 border-white px-8 py-4 group-hover:border-gold group-hover:text-gold transition bg-black/40 backdrop-blur-sm rounded-sm">
+                            Demolition</h3>
                     </div>
                 </a>
             </div>
@@ -504,7 +496,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Project
-                            Vision (Pool Build, Remodel, Pavers, etc.)</label>
+                            Vision</label>
                         <textarea name="message" rows="5" required
                             class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm"></textarea>
                     </div>
@@ -558,7 +550,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 

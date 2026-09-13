@@ -92,23 +92,17 @@
 </head>
 
 <body class="bg-darker text-gray-200 font-sans antialiased">
-
     <!-- Navigation -->
     <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pools
                         <span class="text-gold">and Pavers</span></a>
                 </div>
-
-                <!-- Desktop Nav (Hidden on Mobile) -->
                 <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
                     <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
                     <a href="index.html#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
-
-                    <!-- Dropdown Portfolio Menu -->
                     <div class="relative group mr-8">
                         <button
                             class="text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
@@ -126,14 +120,13 @@
                             <a href="remodels.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
                             <a href="concrete.html"
-                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Concrete</a>
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Concrete</a>
+                            <a href="demo.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Demolition</a>
                         </div>
                     </div>
-
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition">
                         <i class="fa-solid fa-bars text-3xl"></i>
@@ -141,8 +134,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu Panel (Hidden by default) -->
         <div id="mobile-menu"
             class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
             <div class="px-4 pt-4 pb-6 space-y-2">
@@ -151,7 +142,6 @@
                 <a href="index.html#process"
                     class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Our
                     Process</a>
-
                 <div
                     class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
                     Portfolio</div>
@@ -164,8 +154,9 @@
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
                     <a href="concrete.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
+                    <a href="demo.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Demolition</a>
                 </div>
-
                 <a href="#contact"
                     class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
                     a Free Estimate</a>
@@ -188,14 +179,10 @@
 
     <section class="py-24 bg-darker">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div class="masonry" id="galleryGrid">
-            </div>
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid"></div>
             <div class="text-center mt-20 pt-16 border-t border-gray-800 reveal">
                 <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Want to see more of our work?
                 </h3>
-                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">We are constantly updating our portfolio with our latest
-                    custom builds, remodels, and hardscaping projects.</p>
                 <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white font-bold rounded-sm text-lg transition uppercase tracking-wider">
@@ -210,14 +197,15 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-dark relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
             <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold text-white mb-3 uppercase tracking-wide">Request a Free Estimate <span
                             class="text-gold">& Design Consultation</span></h2>
-                    <p class="text-gray-400">Stop dreaming and start building. Connect directly with our in-house design
-                        team by calling <a href="tel:2103742779"
+                    <p class="text-gray-400">Connect directly with our in-house design team by calling <a
+                            href="tel:2103742779"
                             class="text-gold font-bold hover:text-white transition">210-374-2779</a> or submitting your
                         project details below.</p>
                 </div>
@@ -244,7 +232,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Project
-                            Vision (Pool Build, Remodel, Pavers, etc.)</label>
+                            Vision</label>
                         <textarea name="message" rows="5" required
                             class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm"></textarea>
                     </div>
@@ -257,6 +245,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -297,7 +286,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuBtn && mobileMenu) {
@@ -316,18 +304,21 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             const grid = document.getElementById('galleryGrid');
-            const totalImages = 15;
+            const totalImages = 26;
+            let htmlContent = "";
             for (let i = 1; i <= totalImages; i++) {
-                grid.innerHTML += `
-                    <div class="masonry-item relative group overflow-hidden rounded-sm bg-dark border border-gray-800 cursor-pointer" onclick="openLightbox('images/pools/pool-${i}.jpg')">
-                        <img src="images/pools/pool-${i}.jpg" alt="Custom Pool Build ${i}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
+                htmlContent += `
+                    <div class="relative group overflow-hidden rounded-sm bg-gray-900 animate-pulse border border-gray-800 cursor-pointer h-72" onclick="openLightbox('images/pools/pool-${i}.jpg')">
+                        <img src="images/pools/pool-${i}.jpg" alt="Custom Pool Build ${i}" loading="lazy" onload="this.parentElement.classList.remove('animate-pulse')" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                             <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
                         </div>
                     </div>
                 `;
             }
+            grid.innerHTML = htmlContent;
         });
+
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
         function openLightbox(src) { lightbox.style.display = "block"; lightboxImg.src = src; }
