@@ -4,7 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Specialty Pool Remodels | Texas Pools and Pavers</title>
+    <title>Pool &amp; Patio Remodels: Before &amp; After | Texas Pools and Pavers</title>
+    <meta name="description" content="Before-and-after pool and patio remodels in San Antonio: travertine pool decks, steps, walkways, covered patios and porches. Drag to compare real projects.">
+    <link rel="canonical" href="https://texaspoolspavers.com/remodels.html">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Texas Pools and Pavers">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Pool &amp; Patio Remodels: Before &amp; After | Texas Pools and Pavers">
+    <meta property="og:description" content="Before-and-after pool and patio remodels in San Antonio: travertine pool decks, steps, walkways, covered patios and porches. Drag to compare real projects.">
+    <meta property="og:url" content="https://texaspoolspavers.com/remodels.html">
+    <meta property="og:image" content="https://texaspoolspavers.com/images/og/remodels.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Travertine steps and patio remodel by Texas Pools and Pavers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pool &amp; Patio Remodels: Before &amp; After | Texas Pools and Pavers">
+    <meta name="twitter:description" content="Before-and-after pool and patio remodels in San Antonio: travertine pool decks, steps, walkways, covered patios and porches. Drag to compare real projects.">
+    <meta name="twitter:image" content="https://texaspoolspavers.com/images/og/remodels.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -111,6 +131,15 @@
             border: 1px solid #444;
             z-index: 1001;
         }
+
+        .ba-slider { touch-action: pan-y; cursor: ew-resize; }
+        .ba-before { clip-path: inset(0 50% 0 0); }
+        .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #D4AF37; transform: translateX(-50%); pointer-events: none; box-shadow: 0 0 12px rgba(0, 0, 0, 0.6); }
+        .ba-knob { pointer-events: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 9999px; background: #D4AF37; color: #000; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6); cursor: ew-resize; }
+        .ba-knob:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+        .ba-label { position: absolute; top: 14px; padding: 5px 12px; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; pointer-events: none; transition: opacity 0.2s; }
+        .ba-label-left { left: 14px; background: rgba(0, 0, 0, 0.8); color: #fff; border: 1px solid #555; }
+        .ba-label-right { right: 14px; background: #D4AF37; color: #000; }
     </style>
 </head>
 
@@ -120,26 +149,39 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold tracking-wider text-white uppercase">Texas Pools
+                    <a href="index.html" class="text-xl sm:text-2xl font-bold tracking-wide sm:tracking-wider text-white uppercase">Texas Pools
                         <span class="text-gold">and Pavers</span></a>
                 </div>
-                <div class="hidden md:flex items-center text-sm tracking-wide uppercase font-semibold">
-                    <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-8">Expertise</a>
-                    <a href="index.html#process" class="text-gray-300 hover:text-gold transition mr-8">Our Process</a>
-                    <div class="relative group mr-8">
-                        <button
+                <div class="hidden xl:flex items-center text-sm tracking-wide uppercase font-semibold">
+                    <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-7">Expertise</a>
+                    <div class="relative group mr-7">
+                        <button type="button"
+                            class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            Our Process <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                            <a href="index.html#process"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Our Build Process</a>
+                            <a href="pool-process.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">How We Build a Pool</a>
+                        </div>
+                    </div>
+                    <div class="relative group mr-7">
+                        <button type="button"
                             class="text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
                             Portfolio <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
                         </button>
                         <div
-                            class="absolute left-0 top-20 w-48 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
                             <a href="index.html#portfolio"
-                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">All
-                                Categories</a>
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">All Categories</a>
                             <a href="pools.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pools</a>
                             <a href="pavers.html"
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
+                            <a href="turf.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Turf</a>
                             <a href="remodels.html"
                                 class="block px-4 py-3 text-sm text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
                             <a href="concrete.html"
@@ -148,23 +190,45 @@
                                 class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Demolition</a>
                         </div>
                     </div>
+                    <div class="relative group mr-7">
+                        <button type="button"
+                            class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            About <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                            <a href="meet-the-owner.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Meet the Owner</a>
+                            <a href="careers.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Join Our Team</a>
+                        </div>
+                    </div>
                     <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
+                    <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-[#1877F2] transition text-xl ml-7"><i
+                            class="fa-brands fa-facebook"></i></a>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none transition">
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" aria-label="Open menu" class="text-gray-300 hover:text-white focus:outline-none transition">
                         <i class="fa-solid fa-bars text-3xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <div id="mobile-menu"
-            class="hidden md:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40">
+            class="hidden xl:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <div class="px-4 pt-4 pb-6 space-y-2">
                 <a href="index.html#services"
                     class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Expertise</a>
-                <a href="index.html#process"
-                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Our
-                    Process</a>
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    Our Process</div>
+                <div class="pl-4 space-y-1">
+                    <a href="index.html#process"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Our Build Process</a>
+                    <a href="pool-process.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">How We Build a Pool</a>
+                </div>
                 <div
                     class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
                     Portfolio</div>
@@ -173,12 +237,23 @@
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pools</a>
                     <a href="pavers.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pavers</a>
+                    <a href="turf.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Turf</a>
                     <a href="remodels.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gold hover:bg-dark transition">Remodels</a>
                     <a href="concrete.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
                     <a href="demo.html"
                         class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Demolition</a>
+                </div>
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    About</div>
+                <div class="pl-4 space-y-1">
+                    <a href="meet-the-owner.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Meet the Owner</a>
+                    <a href="careers.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Join Our Team</a>
                 </div>
                 <a href="#contact"
                     class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
@@ -189,30 +264,357 @@
 
     <section class="bg-black py-20 border-b border-gray-800 text-center reveal">
         <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Specialty <span
-                    class="text-gold">Pool Remodels</span></h1>
+            <p class="text-gold font-bold uppercase tracking-[0.3em] text-sm mb-4">Before &amp; After</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">Pool &amp; Patio <span
+                    class="text-gold">Remodels</span></h1>
             <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
             <p class="text-gray-400 text-lg leading-relaxed">
-                Breathe new life into your existing pool. From structural repairs and equipment upgrades to premium
-                plastering and custom tile lines, we deliver expert craftsmanship to completely revitalize your space.
-                Browse our transformations below to see the impact of our work.
+                See what a remodel can do. From worn concrete and cracked flagstone to elegant travertine pool decks,
+                steps and patios, these are real projects from our crew, shown before and after.
+            </p>
+            <p class="mt-8 inline-flex items-center gap-3 text-sm text-gray-300 bg-dark border border-gray-800 rounded-full px-5 py-2">
+                <i class="fa-solid fa-arrows-left-right text-gold"></i> Drag the slider on any photo to compare
             </p>
         </div>
     </section>
 
-    <section class="py-24 bg-darker">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div class="flex flex-col gap-12" id="galleryGrid"></div>
+    <!-- Featured Transformation -->
+    <section class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-7 reveal">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none border border-gold/60 shadow-[0_0_40px_rgba(212,175,55,0.15)]" id="featuredSlider">
+                        <img src="images/remodels/compare/p4-3-after.jpg" alt="After: Travertine Pool Deck, Patio &amp; Stair Renovation" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p4-3-before.jpg" alt="Before: Travertine Pool Deck, Patio &amp; Stair Renovation" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="grid grid-cols-5 gap-2 sm:gap-3 mt-3">
+                    <button type="button" class="ba-thumb group relative aspect-[4/3] overflow-hidden rounded-sm border-2 border-gold hover:border-gold transition"
+                        data-key="p4-3" aria-label="Show Pool &amp; deck before and after" aria-pressed="true">
+                        <img src="images/remodels/compare/p4-3-after.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+                        <span class="hidden sm:block absolute inset-x-0 bottom-0 bg-black/75 text-[10px] lg:text-xs text-white font-semibold uppercase tracking-wider py-1 text-center">Pool &amp; deck</span>
+                    </button>
+                    <button type="button" class="ba-thumb group relative aspect-[4/3] overflow-hidden rounded-sm border-2 border-transparent hover:border-gold transition"
+                        data-key="p4-2" aria-label="Show Stair wall before and after" aria-pressed="false">
+                        <img src="images/remodels/compare/p4-2-after.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+                        <span class="hidden sm:block absolute inset-x-0 bottom-0 bg-black/75 text-[10px] lg:text-xs text-white font-semibold uppercase tracking-wider py-1 text-center">Stair wall</span>
+                    </button>
+                    <button type="button" class="ba-thumb group relative aspect-[4/3] overflow-hidden rounded-sm border-2 border-transparent hover:border-gold transition"
+                        data-key="p4-1" aria-label="Show Raised wall before and after" aria-pressed="false">
+                        <img src="images/remodels/compare/p4-1-after.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+                        <span class="hidden sm:block absolute inset-x-0 bottom-0 bg-black/75 text-[10px] lg:text-xs text-white font-semibold uppercase tracking-wider py-1 text-center">Raised wall</span>
+                    </button>
+                    <button type="button" class="ba-thumb group relative aspect-[4/3] overflow-hidden rounded-sm border-2 border-transparent hover:border-gold transition"
+                        data-key="p4-4" aria-label="Show Pool steps before and after" aria-pressed="false">
+                        <img src="images/remodels/compare/p4-4-after.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+                        <span class="hidden sm:block absolute inset-x-0 bottom-0 bg-black/75 text-[10px] lg:text-xs text-white font-semibold uppercase tracking-wider py-1 text-center">Pool steps</span>
+                    </button>
+                    <button type="button" class="ba-thumb group relative aspect-[4/3] overflow-hidden rounded-sm border-2 border-transparent hover:border-gold transition"
+                        data-key="p4-5" aria-label="Show Spa side before and after" aria-pressed="false">
+                        <img src="images/remodels/compare/p4-5-after.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+                        <span class="hidden sm:block absolute inset-x-0 bottom-0 bg-black/75 text-[10px] lg:text-xs text-white font-semibold uppercase tracking-wider py-1 text-center">Spa side</span>
+                    </button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 reveal">
+                <p class="text-gold font-bold uppercase tracking-[0.3em] text-xs mb-3">Featured Transformation</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white uppercase tracking-tight leading-tight mb-5">Travertine Pool Deck, Patio &amp; Stair Renovation</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-6">A complete backyard refresh for a brick home. The worn pool deck, brick steps and side walkways were replaced with travertine, and the exterior stair wall was finished in stacked stone.</p>
+                <h3 class="text-white font-bold uppercase tracking-wide text-sm mb-4">What We Did</h3>
+                <ul class="space-y-3 text-gray-300 mb-6">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-gold mr-3 mt-1"></i><span>New travertine pool deck around the pool and spa</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-gold mr-3 mt-1"></i><span>Travertine steps and side walkways in place of worn brick</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-gold mr-3 mt-1"></i><span>Stacked-stone veneer on the exterior stair wall</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-gold mr-3 mt-1"></i><span>Raised wall and built-in steps finished in travertine</span></li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Travertine Pool Deck</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Stacked Stone</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Steps &amp; Walkways</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                    <button type="button" onclick="openGallery(GALLERIES.p4, 0)"
+                        class="inline-flex items-center justify-center whitespace-nowrap px-6 py-4 bg-gold hover:bg-goldHover text-black font-bold uppercase tracking-wider text-sm transition rounded-sm">
+                        <i class="fa-solid fa-images mr-2"></i> View All 27 Photos
+                    </button>
+                    <span class="text-gray-500 text-xs uppercase tracking-wider">15 Before · 2 In Progress · 10 After</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Cards -->
+    <section class="py-20 bg-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">More <span class="text-gold">Transformations</span></h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/p5-after.jpg" alt="After: Gold Travertine Pool Deck &amp; Spa Surround" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p5-before.jpg" alt="Before: Gold Travertine Pool Deck &amp; Spa Surround" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 class="text-white text-xl font-bold uppercase tracking-wide mb-3">Gold Travertine Pool Deck &amp; Spa Surround</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">A tired concrete pool deck replaced with gold travertine around a kidney-shaped pool and raised spa.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Travertine Pool Deck</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Spa Surround</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Curved Edges</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button type="button" onclick="openGallery(GALLERIES.p5, 0)"
+                            class="inline-flex items-center px-5 py-3 border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs transition rounded-sm">
+                            <i class="fa-solid fa-images text-gold mr-2"></i> View All 18 Photos
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/p1-after.jpg" alt="After: Flagstone to Travertine Pool Deck" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p1-before.jpg" alt="Before: Flagstone to Travertine Pool Deck" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 class="text-white text-xl font-bold uppercase tracking-wide mb-3">Flagstone to Travertine Pool Deck</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Cracked flagstone replaced with clean travertine around the pool and spa, finished with crisp curved edges along the lawn.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Travertine Pool Deck</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Raised Patio</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Curved Lawn Edges</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button type="button" onclick="openGallery(GALLERIES.p1, 0)"
+                            class="inline-flex items-center px-5 py-3 border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs transition rounded-sm">
+                            <i class="fa-solid fa-images text-gold mr-2"></i> View All 11 Photos
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/p2-after.jpg" alt="After: Travertine Pool Deck &amp; Covered Patio" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p2-before.jpg" alt="Before: Travertine Pool Deck &amp; Covered Patio" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 class="text-white text-xl font-bold uppercase tracking-wide mb-3">Travertine Pool Deck &amp; Covered Patio</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">A weathered, stained deck under the covered patio and around the pool replaced with fresh travertine for one seamless outdoor space.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Covered Patio</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Pool Deck</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Coping</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button type="button" onclick="openGallery(GALLERIES.p2, 0)"
+                            class="inline-flex items-center px-5 py-3 border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs transition rounded-sm">
+                            <i class="fa-solid fa-images text-gold mr-2"></i> View All 17 Photos
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/p3-after.jpg" alt="After: Grand Entry Steps &amp; Pool Deck" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p3-before.jpg" alt="Before: Grand Entry Steps &amp; Pool Deck" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="p-6 md:p-8 flex flex-col flex-1">
+                    <h3 class="text-white text-xl font-bold uppercase tracking-wide mb-3">Grand Entry Steps &amp; Pool Deck</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Sweeping curved entry steps and the surrounding pool deck renewed in travertine for a resort-style finish.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Curved Steps</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Pool Deck</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Travertine</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button type="button" onclick="openGallery(GALLERIES.p3, 0)"
+                            class="inline-flex items-center px-5 py-3 border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs transition rounded-sm">
+                            <i class="fa-solid fa-images text-gold mr-2"></i> View All 11 Photos
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal md:col-span-2 bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/p6-after.jpg" alt="After: Front Porch &amp; Travertine Walkway" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/p6-before.jpg" alt="In Progress: Front Porch &amp; Travertine Walkway" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">In Progress</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare in progress and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <div class="p-6 md:p-10 flex flex-col justify-center">
+                    <h3 class="text-white text-xl md:text-2xl font-bold uppercase tracking-wide mb-3">Front Porch &amp; Travertine Walkway</h3>
+                    <p class="text-gray-400 leading-relaxed mb-5">A front porch finished in travertine, with large travertine stepping pads set in black gravel leading to the entry.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Front Porch</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Stepping Pads</span>
+                            <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold border border-gold/40 bg-gold/5 rounded-sm">Gravel Borders</span>
+                    </div>
+                    <div>
+                        <button type="button" onclick="openGallery(GALLERIES.p6, 0)"
+                            class="inline-flex items-center px-5 py-3 border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs transition rounded-sm">
+                            <i class="fa-solid fa-images text-gold mr-2"></i> View All 9 Photos
+                        </button>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Before & Afters -->
+    <section class="py-20 bg-darker border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">Quick <span class="text-gold">Before &amp; Afters</span></h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q1-after.jpg" alt="After: Travertine Patio &amp; Steps Upgrade" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q1-before.jpg" alt="Before: Travertine Patio &amp; Steps Upgrade" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Travertine Patio &amp; Steps Upgrade</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q1, 0)" aria-label="Enlarge Travertine Patio &amp; Steps Upgrade photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q2-after.jpg" alt="After: Raised Spa &amp; Stone Veneer Transformation" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q2-before.jpg" alt="Before: Raised Spa &amp; Stone Veneer Transformation" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Raised Spa &amp; Stone Veneer Transformation</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q2, 0)" aria-label="Enlarge Raised Spa &amp; Stone Veneer Transformation photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q3-after.jpg" alt="After: Complete Pool &amp; Retaining Wall Renovation" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q3-before.jpg" alt="Before: Complete Pool &amp; Retaining Wall Renovation" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Complete Pool &amp; Retaining Wall Renovation</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q3, 0)" aria-label="Enlarge Complete Pool &amp; Retaining Wall Renovation photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q4-after.jpg" alt="After: Covered Patio Travertine Installation" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q4-before.jpg" alt="Before: Covered Patio Travertine Installation" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Covered Patio Travertine Installation</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q4, 0)" aria-label="Enlarge Covered Patio Travertine Installation photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q5-after.jpg" alt="After: Pool Deck Expansion &amp; Hardscaping" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q5-before.jpg" alt="Before: Pool Deck Expansion &amp; Hardscaping" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Pool Deck Expansion &amp; Hardscaping</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q5, 0)" aria-label="Enlarge Pool Deck Expansion &amp; Hardscaping photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            <figure class="reveal bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden">
+                <div class="ba-slider relative aspect-[4/3] overflow-hidden rounded-sm bg-black select-none rounded-none">
+                        <img src="images/remodels/compare/q6-after.jpg" alt="After: Pool &amp; Spa Deck Resurfacing" class="ba-after absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        <div class="ba-before absolute inset-0">
+                            <img src="images/remodels/compare/q6-before.jpg" alt="Before: Pool &amp; Spa Deck Resurfacing" class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+                        </div>
+                        <span class="ba-label ba-label-left">Before</span>
+                        <span class="ba-label ba-label-right">After</span>
+                        <div class="ba-handle"><button type="button" class="ba-knob" role="slider" aria-label="Drag to compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i class="fa-solid fa-arrows-left-right"></i></button></div>
+                    </div>
+                <figcaption class="flex items-center justify-between gap-3 px-5 py-4">
+                    <span class="text-white text-sm font-bold uppercase tracking-wide">Pool &amp; Spa Deck Resurfacing</span>
+                    <button type="button" onclick="openGallery(GALLERIES.q6, 0)" aria-label="Enlarge Pool &amp; Spa Deck Resurfacing photos"
+                        class="shrink-0 w-9 h-9 flex items-center justify-center border border-gray-700 hover:border-gold text-gray-400 hover:text-gold rounded-sm transition"><i class="fa-solid fa-expand"></i></button>
+                </figcaption>
+            </figure>
+            </div>
             <div class="text-center mt-20 pt-16 border-t border-gray-800 reveal">
-                <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Want to see more of our work?
-                </h3>
-                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">We are constantly updating our portfolio with our latest
-                    custom builds, remodels, and hardscaping projects.</p>
+                <h3 class="text-2xl font-bold text-white mb-6 uppercase tracking-wide">Want to see more of our work?</h3>
                 <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white font-bold rounded-sm text-lg transition uppercase tracking-wider">
                     <i class="fa-brands fa-facebook mr-3 text-2xl"></i> View Full Archive on Facebook
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gold text-black py-16 reveal">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold uppercase tracking-wide mb-4">Ready for Your Own Before &amp; After?</h2>
+            <p class="text-lg md:text-xl font-medium leading-relaxed mb-8">Tell us about your pool deck, patio or backyard and
+                we’ll help you plan the transformation.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact"
+                    class="w-full sm:w-auto px-8 py-4 bg-black text-white hover:bg-dark font-bold rounded-sm uppercase tracking-wider transition">Get a Free Estimate</a>
+                <a href="tel:2103742779"
+                    class="w-full sm:w-auto px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white font-bold rounded-sm uppercase tracking-wider transition"><i
+                        class="fa-solid fa-phone mr-2"></i> 210-374-2779</a>
             </div>
         </div>
     </section>
@@ -261,6 +663,12 @@
                         <input type="email" name="email" required
                             class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
                     </div>
+                    <!-- HONEYPOT FIELD (Anti-Spam) -->
+                    <div class="hidden" style="display:none;" aria-hidden="true">
+                        <label>Don't fill this out if you're human:</label>
+                        <input type="text" name="botcheck" tabindex="-1" autocomplete="off">
+                    </div>
+
                     <div>
                         <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Project
                             Vision</label>
@@ -310,7 +718,9 @@
                 class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
                 <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6">
                     <p>© 2026 Texas Pools and Pavers. All Rights Reserved.</p>
-                    <div class="flex gap-4 mt-2 md:mt-0">
+                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-2 md:mt-0">
+                        <a href="meet-the-owner.html" class="hover:text-gold transition">Meet the Owner</a>
+                        <a href="careers.html" class="hover:text-gold transition">Careers</a>
                         <a href="privacy.html" class="hover:text-gold transition">Privacy Policy</a>
                         <a href="terms.html" class="hover:text-gold transition">Terms & Conditions</a>
                     </div>
@@ -340,169 +750,44 @@
             });
         }
 
-        const project1Gallery = [
-            { src: 'images/remodels/project1/before1.jpg', title: 'Complete Renovation: Before (1 of 4)' },
-            { src: 'images/remodels/project1/before2.jpg', title: 'Complete Renovation: Before (2 of 4)' },
-            { src: 'images/remodels/project1/before3.jpg', title: 'Complete Renovation: Before (3 of 4)' },
-            { src: 'images/remodels/project1/before4.jpg', title: 'Complete Renovation: Before (4 of 4)' },
-            { src: 'images/remodels/project1/after1.jpg', title: 'Complete Renovation: After (1 of 7)' },
-            { src: 'images/remodels/project1/after2.jpg', title: 'Complete Renovation: After (2 of 7)' },
-            { src: 'images/remodels/project1/after3.jpg', title: 'Complete Renovation: After (3 of 7)' },
-            { src: 'images/remodels/project1/after4.jpg', title: 'Complete Renovation: After (4 of 7)' },
-            { src: 'images/remodels/project1/after5.jpg', title: 'Complete Renovation: After (5 of 7)' },
-            { src: 'images/remodels/project1/after6.jpg', title: 'Complete Renovation: After (6 of 7)' },
-            { src: 'images/remodels/project1/after7.jpg', title: 'Complete Renovation: After (7 of 7)' }
-        ];
+        const GALLERIES = {"p4": [{"src": "images/remodels/project4/before1.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (1 of 15)"}, {"src": "images/remodels/project4/before2.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (2 of 15)"}, {"src": "images/remodels/project4/before3.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (3 of 15)"}, {"src": "images/remodels/project4/before4.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (4 of 15)"}, {"src": "images/remodels/project4/before5.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (5 of 15)"}, {"src": "images/remodels/project4/before6.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (6 of 15)"}, {"src": "images/remodels/project4/before7.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (7 of 15)"}, {"src": "images/remodels/project4/before8.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (8 of 15)"}, {"src": "images/remodels/project4/before9.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (9 of 15)"}, {"src": "images/remodels/project4/before10.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (10 of 15)"}, {"src": "images/remodels/project4/before11.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (11 of 15)"}, {"src": "images/remodels/project4/before12.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (12 of 15)"}, {"src": "images/remodels/project4/before13.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (13 of 15)"}, {"src": "images/remodels/project4/before14.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (14 of 15)"}, {"src": "images/remodels/project4/before15.jpg", "title": "Pool Deck, Patio & Stair Renovation: Before (15 of 15)"}, {"src": "images/remodels/project4/during1.jpg", "title": "Pool Deck, Patio & Stair Renovation: In Progress (1 of 2)"}, {"src": "images/remodels/project4/during2.jpg", "title": "Pool Deck, Patio & Stair Renovation: In Progress (2 of 2)"}, {"src": "images/remodels/project4/after1.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (1 of 10)"}, {"src": "images/remodels/project4/after2.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (2 of 10)"}, {"src": "images/remodels/project4/after3.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (3 of 10)"}, {"src": "images/remodels/project4/after4.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (4 of 10)"}, {"src": "images/remodels/project4/after5.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (5 of 10)"}, {"src": "images/remodels/project4/after6.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (6 of 10)"}, {"src": "images/remodels/project4/after7.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (7 of 10)"}, {"src": "images/remodels/project4/after8.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (8 of 10)"}, {"src": "images/remodels/project4/after9.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (9 of 10)"}, {"src": "images/remodels/project4/after10.jpg", "title": "Pool Deck, Patio & Stair Renovation: After (10 of 10)"}], "p5": [{"src": "images/remodels/project5/before1.jpg", "title": "Gold Travertine Pool Deck: Before (1 of 13)"}, {"src": "images/remodels/project5/before2.jpg", "title": "Gold Travertine Pool Deck: Before (2 of 13)"}, {"src": "images/remodels/project5/before3.jpg", "title": "Gold Travertine Pool Deck: Before (3 of 13)"}, {"src": "images/remodels/project5/before4.jpg", "title": "Gold Travertine Pool Deck: Before (4 of 13)"}, {"src": "images/remodels/project5/before5.jpg", "title": "Gold Travertine Pool Deck: Before (5 of 13)"}, {"src": "images/remodels/project5/before6.jpg", "title": "Gold Travertine Pool Deck: Before (6 of 13)"}, {"src": "images/remodels/project5/before7.jpg", "title": "Gold Travertine Pool Deck: Before (7 of 13)"}, {"src": "images/remodels/project5/before8.jpg", "title": "Gold Travertine Pool Deck: Before (8 of 13)"}, {"src": "images/remodels/project5/before9.jpg", "title": "Gold Travertine Pool Deck: Before (9 of 13)"}, {"src": "images/remodels/project5/before10.jpg", "title": "Gold Travertine Pool Deck: Before (10 of 13)"}, {"src": "images/remodels/project5/before11.jpg", "title": "Gold Travertine Pool Deck: Before (11 of 13)"}, {"src": "images/remodels/project5/before12.jpg", "title": "Gold Travertine Pool Deck: Before (12 of 13)"}, {"src": "images/remodels/project5/before13.jpg", "title": "Gold Travertine Pool Deck: Before (13 of 13)"}, {"src": "images/remodels/project5/after1.jpg", "title": "Gold Travertine Pool Deck: After (1 of 5)"}, {"src": "images/remodels/project5/after2.jpg", "title": "Gold Travertine Pool Deck: After (2 of 5)"}, {"src": "images/remodels/project5/after3.jpg", "title": "Gold Travertine Pool Deck: After (3 of 5)"}, {"src": "images/remodels/project5/after4.jpg", "title": "Gold Travertine Pool Deck: After (4 of 5)"}, {"src": "images/remodels/project5/after5.jpg", "title": "Gold Travertine Pool Deck: After (5 of 5)"}], "p1": [{"src": "images/remodels/project1/before1.jpg", "title": "Flagstone to Travertine Pool Deck: Before (1 of 4)"}, {"src": "images/remodels/project1/before2.jpg", "title": "Flagstone to Travertine Pool Deck: Before (2 of 4)"}, {"src": "images/remodels/project1/before3.jpg", "title": "Flagstone to Travertine Pool Deck: Before (3 of 4)"}, {"src": "images/remodels/project1/before4.jpg", "title": "Flagstone to Travertine Pool Deck: Before (4 of 4)"}, {"src": "images/remodels/project1/after1.jpg", "title": "Flagstone to Travertine Pool Deck: After (1 of 7)"}, {"src": "images/remodels/project1/after2.jpg", "title": "Flagstone to Travertine Pool Deck: After (2 of 7)"}, {"src": "images/remodels/project1/after3.jpg", "title": "Flagstone to Travertine Pool Deck: After (3 of 7)"}, {"src": "images/remodels/project1/after4.jpg", "title": "Flagstone to Travertine Pool Deck: After (4 of 7)"}, {"src": "images/remodels/project1/after5.jpg", "title": "Flagstone to Travertine Pool Deck: After (5 of 7)"}, {"src": "images/remodels/project1/after6.jpg", "title": "Flagstone to Travertine Pool Deck: After (6 of 7)"}, {"src": "images/remodels/project1/after7.jpg", "title": "Flagstone to Travertine Pool Deck: After (7 of 7)"}], "p2": [{"src": "images/remodels/project2/before1.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (1 of 6)"}, {"src": "images/remodels/project2/before2.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (2 of 6)"}, {"src": "images/remodels/project2/before3.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (3 of 6)"}, {"src": "images/remodels/project2/before4.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (4 of 6)"}, {"src": "images/remodels/project2/before5.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (5 of 6)"}, {"src": "images/remodels/project2/before6.jpg", "title": "Travertine Pool Deck & Covered Patio: Before (6 of 6)"}, {"src": "images/remodels/project2/after1.jpg", "title": "Travertine Pool Deck & Covered Patio: After (1 of 11)"}, {"src": "images/remodels/project2/after2.jpg", "title": "Travertine Pool Deck & Covered Patio: After (2 of 11)"}, {"src": "images/remodels/project2/after3.jpg", "title": "Travertine Pool Deck & Covered Patio: After (3 of 11)"}, {"src": "images/remodels/project2/after4.jpg", "title": "Travertine Pool Deck & Covered Patio: After (4 of 11)"}, {"src": "images/remodels/project2/after5.jpg", "title": "Travertine Pool Deck & Covered Patio: After (5 of 11)"}, {"src": "images/remodels/project2/after6.jpg", "title": "Travertine Pool Deck & Covered Patio: After (6 of 11)"}, {"src": "images/remodels/project2/after7.jpg", "title": "Travertine Pool Deck & Covered Patio: After (7 of 11)"}, {"src": "images/remodels/project2/after8.jpg", "title": "Travertine Pool Deck & Covered Patio: After (8 of 11)"}, {"src": "images/remodels/project2/after9.jpg", "title": "Travertine Pool Deck & Covered Patio: After (9 of 11)"}, {"src": "images/remodels/project2/after10.jpg", "title": "Travertine Pool Deck & Covered Patio: After (10 of 11)"}, {"src": "images/remodels/project2/after11.jpg", "title": "Travertine Pool Deck & Covered Patio: After (11 of 11)"}], "p3": [{"src": "images/remodels/project3/before1.jpg", "title": "Grand Entry Steps & Pool Deck: Before (1 of 2)"}, {"src": "images/remodels/project3/before2.jpg", "title": "Grand Entry Steps & Pool Deck: Before (2 of 2)"}, {"src": "images/remodels/project3/after1.jpg", "title": "Grand Entry Steps & Pool Deck: After (1 of 9)"}, {"src": "images/remodels/project3/after2.jpg", "title": "Grand Entry Steps & Pool Deck: After (2 of 9)"}, {"src": "images/remodels/project3/after3.jpg", "title": "Grand Entry Steps & Pool Deck: After (3 of 9)"}, {"src": "images/remodels/project3/after4.jpg", "title": "Grand Entry Steps & Pool Deck: After (4 of 9)"}, {"src": "images/remodels/project3/after5.jpg", "title": "Grand Entry Steps & Pool Deck: After (5 of 9)"}, {"src": "images/remodels/project3/after6.jpg", "title": "Grand Entry Steps & Pool Deck: After (6 of 9)"}, {"src": "images/remodels/project3/after7.jpg", "title": "Grand Entry Steps & Pool Deck: After (7 of 9)"}, {"src": "images/remodels/project3/after8.jpg", "title": "Grand Entry Steps & Pool Deck: After (8 of 9)"}, {"src": "images/remodels/project3/after9.jpg", "title": "Grand Entry Steps & Pool Deck: After (9 of 9)"}], "p6": [{"src": "images/remodels/project6/during1.jpg", "title": "Front Porch & Travertine Walkway: In Progress (1 of 6)"}, {"src": "images/remodels/project6/during2.jpg", "title": "Front Porch & Travertine Walkway: In Progress (2 of 6)"}, {"src": "images/remodels/project6/during3.jpg", "title": "Front Porch & Travertine Walkway: In Progress (3 of 6)"}, {"src": "images/remodels/project6/during4.jpg", "title": "Front Porch & Travertine Walkway: In Progress (4 of 6)"}, {"src": "images/remodels/project6/during5.jpg", "title": "Front Porch & Travertine Walkway: In Progress (5 of 6)"}, {"src": "images/remodels/project6/during6.jpg", "title": "Front Porch & Travertine Walkway: In Progress (6 of 6)"}, {"src": "images/remodels/project6/after1.jpg", "title": "Front Porch & Travertine Walkway: After (1 of 3)"}, {"src": "images/remodels/project6/after2.jpg", "title": "Front Porch & Travertine Walkway: After (2 of 3)"}, {"src": "images/remodels/project6/after3.jpg", "title": "Front Porch & Travertine Walkway: After (3 of 3)"}], "q1": [{"src": "images/remodels/before1.jpg", "title": "Travertine Patio & Steps Upgrade: Before"}, {"src": "images/remodels/after1.jpg", "title": "Travertine Patio & Steps Upgrade: After"}], "q2": [{"src": "images/remodels/before2.jpg", "title": "Raised Spa & Stone Veneer Transformation: Before"}, {"src": "images/remodels/after2.jpg", "title": "Raised Spa & Stone Veneer Transformation: After"}], "q3": [{"src": "images/remodels/before3.jpg", "title": "Complete Pool & Retaining Wall Renovation: Before"}, {"src": "images/remodels/after3.jpg", "title": "Complete Pool & Retaining Wall Renovation: After"}], "q4": [{"src": "images/remodels/before4.jpg", "title": "Covered Patio Travertine Installation: Before"}, {"src": "images/remodels/after4.jpg", "title": "Covered Patio Travertine Installation: After"}], "q5": [{"src": "images/remodels/before5.jpg", "title": "Pool Deck Expansion & Hardscaping: Before"}, {"src": "images/remodels/after5.jpg", "title": "Pool Deck Expansion & Hardscaping: After"}], "q6": [{"src": "images/remodels/before6.jpg", "title": "Pool & Spa Deck Resurfacing: Before"}, {"src": "images/remodels/after6.jpg", "title": "Pool & Spa Deck Resurfacing: After"}]};
 
-        const project2Gallery = [
-            { src: 'images/remodels/project2/before1.jpg', title: 'Backyard Transformation: Before (1 of 6)' },
-            { src: 'images/remodels/project2/before2.jpg', title: 'Backyard Transformation: Before (2 of 6)' },
-            { src: 'images/remodels/project2/before3.jpg', title: 'Backyard Transformation: Before (3 of 6)' },
-            { src: 'images/remodels/project2/before4.jpg', title: 'Backyard Transformation: Before (4 of 6)' },
-            { src: 'images/remodels/project2/before5.jpg', title: 'Backyard Transformation: Before (5 of 6)' },
-            { src: 'images/remodels/project2/before6.jpg', title: 'Backyard Transformation: Before (6 of 6)' },
-            { src: 'images/remodels/project2/after1.jpg', title: 'Backyard Transformation: After (1 of 11)' },
-            { src: 'images/remodels/project2/after2.jpg', title: 'Backyard Transformation: After (2 of 11)' },
-            { src: 'images/remodels/project2/after3.jpg', title: 'Backyard Transformation: After (3 of 11)' },
-            { src: 'images/remodels/project2/after4.jpg', title: 'Backyard Transformation: After (4 of 11)' },
-            { src: 'images/remodels/project2/after5.jpg', title: 'Backyard Transformation: After (5 of 11)' },
-            { src: 'images/remodels/project2/after6.jpg', title: 'Backyard Transformation: After (6 of 11)' },
-            { src: 'images/remodels/project2/after7.jpg', title: 'Backyard Transformation: After (7 of 11)' },
-            { src: 'images/remodels/project2/after8.jpg', title: 'Backyard Transformation: After (8 of 11)' },
-            { src: 'images/remodels/project2/after9.jpg', title: 'Backyard Transformation: After (9 of 11)' },
-            { src: 'images/remodels/project2/after10.jpg', title: 'Backyard Transformation: After (10 of 11)' },
-            { src: 'images/remodels/project2/after11.jpg', title: 'Backyard Transformation: After (11 of 11)' }
-        ];
+        // ---------- Before/After sliders ----------
+        function setSlider(slider, pct) {
+            pct = Math.max(0, Math.min(100, pct));
+            slider.querySelector('.ba-before').style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+            slider.querySelector('.ba-handle').style.left = pct + '%';
+            const knob = slider.querySelector('.ba-knob');
+            knob.setAttribute('aria-valuenow', Math.round(pct));
+            slider.querySelector('.ba-label-left').style.opacity = pct < 18 ? 0 : 1;
+            slider.querySelector('.ba-label-right').style.opacity = pct > 82 ? 0 : 1;
+            slider.dataset.pos = pct;
+        }
+        document.querySelectorAll('.ba-slider').forEach(slider => {
+            let dragging = false;
+            const move = (x) => { const r = slider.getBoundingClientRect(); setSlider(slider, ((x - r.left) / r.width) * 100); };
+            slider.addEventListener('pointerdown', (e) => { dragging = true; slider.setPointerCapture(e.pointerId); move(e.clientX); });
+            slider.addEventListener('pointermove', (e) => { if (dragging) move(e.clientX); });
+            ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => slider.addEventListener(t, () => { dragging = false; }));
+            slider.querySelector('.ba-knob').addEventListener('keydown', (e) => {
+                const p = parseFloat(slider.dataset.pos || 50);
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { setSlider(slider, p - 5); e.preventDefault(); }
+                if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { setSlider(slider, p + 5); e.preventDefault(); }
+                if (e.key === 'Home') { setSlider(slider, 0); e.preventDefault(); }
+                if (e.key === 'End') { setSlider(slider, 100); e.preventDefault(); }
+            });
+            setSlider(slider, 50);
+        });
 
-        const project3Gallery = [
-            { src: 'images/remodels/project3/before1.jpg', title: 'Premium Pool Remodel: Before (1 of 2)' },
-            { src: 'images/remodels/project3/before2.jpg', title: 'Premium Pool Remodel: Before (2 of 2)' },
-            { src: 'images/remodels/project3/after1.jpg', title: 'Premium Pool Remodel: After (1 of 9)' },
-            { src: 'images/remodels/project3/after2.jpg', title: 'Premium Pool Remodel: After (2 of 9)' },
-            { src: 'images/remodels/project3/after3.jpg', title: 'Premium Pool Remodel: After (3 of 9)' },
-            { src: 'images/remodels/project3/after4.jpg', title: 'Premium Pool Remodel: After (4 of 9)' },
-            { src: 'images/remodels/project3/after5.jpg', title: 'Premium Pool Remodel: After (5 of 9)' },
-            { src: 'images/remodels/project3/after6.jpg', title: 'Premium Pool Remodel: After (6 of 9)' },
-            { src: 'images/remodels/project3/after7.jpg', title: 'Premium Pool Remodel: After (7 of 9)' },
-            { src: 'images/remodels/project3/after8.jpg', title: 'Premium Pool Remodel: After (8 of 9)' },
-            { src: 'images/remodels/project3/after9.jpg', title: 'Premium Pool Remodel: After (9 of 9)' }
-        ];
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const grid = document.getElementById('galleryGrid');
-            let htmlContent = `
-                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl">
-                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Complete Renovation</h3>
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project1Gallery, 0)">
-                            <img src="images/remodels/project1/before1.jpg" alt="Complete Renovation Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
-                                <span>Before</span> <span class="text-gold">(4 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project1Gallery, 6)">
-                            <img src="images/remodels/project1/after3.jpg" alt="Complete Renovation After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
-                                <span>After</span> <span class="text-black/80">(7 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="openGallery(project1Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
-                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (11 Photos)
-                    </button>
-                </div>
-                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl mt-4">
-                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Backyard Transformation</h3>
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project2Gallery, 3)">
-                            <img src="images/remodels/project2/before4.jpg" alt="Backyard Transformation Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
-                                <span>Before</span> <span class="text-gold">(6 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project2Gallery, 11)">
-                            <img src="images/remodels/project2/after6.jpg" alt="Backyard Transformation After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
-                                <span>After</span> <span class="text-black/80">(11 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="openGallery(project2Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
-                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (17 Photos)
-                    </button>
-                </div>
-                <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-xl mt-4">
-                    <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">Premium Pool Remodel</h3>
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-6">
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project3Gallery, 0)">
-                            <img src="images/remodels/project3/before1.jpg" alt="Premium Pool Remodel Before" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-black/80 text-white text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm border border-gray-600 uppercase tracking-widest flex items-center gap-2">
-                                <span>Before</span> <span class="text-gold">(2 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                        <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery(project3Gallery, 9)">
-                            <img src="images/remodels/project3/after8.jpg" alt="Premium Pool Remodel After" class="w-full h-80 object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                            <div class="absolute top-4 left-4 bg-gold text-black text-xs md:text-sm px-3 py-1.5 font-bold rounded-sm uppercase tracking-widest shadow-md flex items-center gap-2">
-                                <span>After</span> <span class="text-black/80">(9 Photos)</span>
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="openGallery(project3Gallery, 0)" class="w-full mt-4 py-3 bg-darker border border-gray-700 hover:border-gold text-gray-300 hover:text-gold font-bold uppercase tracking-wider text-xs md:text-sm transition flex items-center justify-center gap-2 rounded-sm">
-                        <i class="fa-solid fa-images text-gold"></i> View Full Gallery (11 Photos)
-                    </button>
-                </div>
-            `;
-            grid.innerHTML = htmlContent;
-
-            const standardProjects = [
-                "Travertine Patio & Steps Upgrade",
-                "Raised Spa & Stone Veneer Transformation",
-                "Complete Pool & Retaining Wall Renovation",
-                "Covered Patio Travertine Installation",
-                "Pool Deck Expansion & Hardscaping",
-                "Pool & Spa Deck Resurfacing"
-            ];
-            standardProjects.forEach((projectName, index) => {
-                let i = index + 1;
-                grid.innerHTML += `
-                    <div class="bg-dark border border-gray-800 p-4 md:p-6 rounded-sm shadow-lg mt-4">
-                        <h3 class="text-gold text-center uppercase font-bold tracking-widest mb-4 md:mb-6 text-lg md:text-2xl">${projectName}</h3>
-                        <div class="flex flex-col md:flex-row gap-4 md:gap-6">
-                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery([ {src: 'images/remodels/before${i}.jpg', title: '${projectName} - Before'}, {src: 'images/remodels/after${i}.jpg', title: '${projectName} - After'} ], 0)">
-                                <img src="images/remodels/before${i}.jpg" alt="Before: ${projectName}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                                <div class="absolute top-4 left-4 bg-black/80 text-white text-sm px-4 py-2 font-bold rounded-sm border border-gray-600 uppercase tracking-widest">Before</div>
-                                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                    <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                                </div>
-                            </div>
-                            <div class="relative group overflow-hidden w-full md:w-1/2 cursor-pointer rounded-sm" onclick="openGallery([ {src: 'images/remodels/before${i}.jpg', title: '${projectName} - Before'}, {src: 'images/remodels/after${i}.jpg', title: '${projectName} - After'} ], 1)">
-                                <img src="images/remodels/after${i}.jpg" alt="After: ${projectName}" class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105 group-hover:opacity-60">
-                                <div class="absolute top-4 left-4 bg-gold text-black text-sm px-4 py-2 font-bold rounded-sm uppercase tracking-widest shadow-md">After</div>
-                                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                                    <i class="fa-solid fa-magnifying-glass-plus text-4xl text-white drop-shadow-lg"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
+        // Featured project: switch between matched angles
+        const featured = document.getElementById('featuredSlider');
+        document.querySelectorAll('.ba-thumb').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const k = btn.dataset.key;
+                featured.querySelector('.ba-after').src = `images/remodels/compare/${k}-after.jpg`;
+                featured.querySelector('.ba-before img').src = `images/remodels/compare/${k}-before.jpg`;
+                setSlider(featured, 50);
+                document.querySelectorAll('.ba-thumb').forEach(b => { b.classList.toggle('border-gold', b === btn); b.classList.toggle('border-transparent', b !== btn); b.setAttribute('aria-pressed', b === btn); });
             });
         });
 
@@ -561,12 +846,18 @@
         document.getElementById('leadForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             const form = e.target;
+
+            // HONEYPOT CHECK: If the hidden field is filled, silently reject it
+            if (form.botcheck.value !== "") {
+                form.reset();
+                return;
+            }
             const submitBtn = form.querySelector('button[type="submit"]');
             const statusDiv = document.getElementById('formStatus');
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
             submitBtn.disabled = true;
             statusDiv.classList.add('hidden');
-            const formData = { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value };
+            const formData = { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value, botcheck: form.botcheck.value };
             try {
                 const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
                 if (response.ok) {

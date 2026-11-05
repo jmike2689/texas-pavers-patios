@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Build Your Custom Pool | Texas Pools and Pavers</title>
+    <meta name="description" content="See our 15-step custom pool construction process in San Antonio, from design and permitting to excavation, steel, plumbing, finishes and your final walkthrough.">
+    <link rel="canonical" href="https://texaspoolspavers.com/pool-process.html">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Texas Pools and Pavers">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="How We Build Your Custom Pool | Texas Pools and Pavers">
+    <meta property="og:description" content="See our 15-step custom pool construction process in San Antonio, from design and permitting to excavation, steel, plumbing, finishes and your final walkthrough.">
+    <meta property="og:url" content="https://texaspoolspavers.com/pool-process.html">
+    <meta property="og:image" content="https://texaspoolspavers.com/images/og/pools.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Custom pool and spa build by Texas Pools and Pavers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How We Build Your Custom Pool | Texas Pools and Pavers">
+    <meta name="twitter:description" content="See our 15-step custom pool construction process in San Antonio, from design and permitting to excavation, steel, plumbing, finishes and your final walkthrough.">
+    <meta name="twitter:image" content="https://texaspoolspavers.com/images/og/pools.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { gold: '#D4AF37', goldHover: '#C5A030', dark: '#111111', darker: '#0a0a0a' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reveal {
+            transform: translateY(40px);
+            opacity: 0;
+            transition: all 0.9s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .masonry {
+            column-count: 1;
+            column-gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            top: 50%;
+            transform: translateY(-50%);
+            position: relative;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1001;
+        }
+
+        .lightbox-close:hover {
+            color: #D4AF37;
+        }
+
+        .step-pattern {
+            background-color: #141414;
+            background-image: linear-gradient(rgba(212, 175, 55, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.07) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12), transparent 65%);
+            background-size: 28px 28px, 28px 28px, 100% 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-gray-200 font-sans antialiased selection:bg-gold selection:text-black">
+    <nav class="bg-dark border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-xl sm:text-2xl font-bold tracking-wide sm:tracking-wider text-white uppercase">Texas Pools
+                        <span class="text-gold">and Pavers</span></a>
+                </div>
+                <div class="hidden xl:flex items-center text-sm tracking-wide uppercase font-semibold">
+                    <a href="index.html#services" class="text-gray-300 hover:text-gold transition mr-7">Expertise</a>
+                    <div class="relative group mr-7">
+                        <button type="button"
+                            class="text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            Our Process <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                            <a href="index.html#process"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Our Build Process</a>
+                            <a href="pool-process.html"
+                                class="block px-4 py-3 text-sm text-gold hover:bg-dark transition">How We Build a Pool</a>
+                        </div>
+                    </div>
+                    <div class="relative group mr-7">
+                        <button type="button"
+                            class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            Portfolio <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                            <a href="index.html#portfolio"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">All Categories</a>
+                            <a href="pools.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pools</a>
+                            <a href="pavers.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Pavers</a>
+                            <a href="turf.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Turf</a>
+                            <a href="remodels.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Remodels</a>
+                            <a href="concrete.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Concrete</a>
+                            <a href="demo.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Demolition</a>
+                        </div>
+                    </div>
+                    <div class="relative group mr-7">
+                        <button type="button"
+                            class="text-gray-300 hover:text-gold transition uppercase tracking-wide font-semibold flex items-center h-20">
+                            About <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 top-20 w-56 bg-darker border border-gray-800 rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
+                            <a href="meet-the-owner.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition border-b border-gray-800">Meet the Owner</a>
+                            <a href="careers.html"
+                                class="block px-4 py-3 text-sm text-gray-300 hover:text-gold hover:bg-dark transition">Join Our Team</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-gold font-bold hover:text-white transition">Get a Free Estimate</a>
+                    <a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-[#1877F2] transition text-xl ml-7"><i
+                            class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" aria-label="Open menu" class="text-gray-300 hover:text-white focus:outline-none transition">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden xl:hidden bg-darker border-t border-gray-800 shadow-xl absolute w-full z-40 max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="index.html#services"
+                    class="block px-3 py-3 rounded-sm text-base font-medium text-gray-300 hover:text-gold hover:bg-dark transition">Expertise</a>
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    Our Process</div>
+                <div class="pl-4 space-y-1">
+                    <a href="index.html#process"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Our Build Process</a>
+                    <a href="pool-process.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gold hover:bg-dark transition">How We Build a Pool</a>
+                </div>
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    Portfolio</div>
+                <div class="pl-4 space-y-1">
+                    <a href="pools.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pools</a>
+                    <a href="pavers.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Pavers</a>
+                    <a href="turf.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Turf</a>
+                    <a href="remodels.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Remodels</a>
+                    <a href="concrete.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Concrete</a>
+                    <a href="demo.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Demolition</a>
+                </div>
+                <div
+                    class="px-3 py-2 mt-2 text-sm font-bold text-gold uppercase tracking-wide border-b border-gray-800">
+                    About</div>
+                <div class="pl-4 space-y-1">
+                    <a href="meet-the-owner.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Meet the Owner</a>
+                    <a href="careers.html"
+                        class="block px-3 py-2 rounded-sm text-base font-medium text-gray-400 hover:text-gold hover:bg-dark transition">Join Our Team</a>
+                </div>
+                <a href="#contact"
+                    class="block mt-4 px-3 py-3 bg-gold text-black text-center font-bold uppercase tracking-wider rounded-sm shadow-lg">Get
+                    a Free Estimate</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-black py-20 border-b border-gray-800 text-center reveal">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-gold font-bold uppercase tracking-[0.3em] text-sm mb-4">Our Process</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 uppercase tracking-wide">How We Build Your<br> <span
+                    class="text-gold">Custom Pool</span></h1>
+            <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                Building a pool involves much more than digging a hole and adding water. Every phase plays an important role in the pool’s safety, strength, appearance and long-term performance.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-pen-ruler text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">1</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Design &amp; Planning</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">We begin by discussing your vision, available space, preferred features and budget. Our team then develops a pool design that complements your home and creates a functional outdoor living space.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Careful planning helps prevent costly changes and ensures the size, shape, depth, decking and features work together properly.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-file-signature text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">2</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Engineering &amp; Permitting</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Construction plans are prepared and, when required, reviewed by an engineer. We also coordinate the necessary permits and approvals before construction begins.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Engineering and permitting help ensure the pool complies with structural, electrical, plumbing and local building requirements.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-03.jpg" alt="Pool shape cut into the backyard" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">3</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Pool Layout</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The shape and location of the pool are marked on the property so you can see how the finished project will fit within your backyard.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">The layout confirms the pool’s position, dimensions, setbacks and relationship to the home before excavation begins.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-04.jpg" alt="Excavated pool site" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">4</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Excavation</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Our team excavates the pool according to the approved dimensions, depths and design.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Accurate excavation creates the foundation for the pool’s structure and ensures the depths, steps, benches and other features are formed correctly.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-border-all text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">5</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Steel Reinforcement</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">A reinforced steel framework is installed throughout the pool according to the construction and engineering plans.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">The steel framework provides structural strength and helps the pool shell withstand soil movement, water pressure and long-term use.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-06.jpg" alt="Plumbing lines installed around the pool" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">6</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Rough Plumbing</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The pool’s circulation lines, drains, skimmers, returns, water features and equipment connections are installed and pressure-tested.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Proper plumbing provides efficient circulation and filtration while pressure testing helps identify leaks before the lines are covered.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">7</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Electrical &amp; Bonding</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Electrical conduits, bonding and required connections are installed for the pool equipment, lights, automation and accessories.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Correct bonding and electrical work are essential for safety, equipment operation and code compliance.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-trowel text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">8</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Gunite or Shotcrete Application</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Concrete is pneumatically applied over the steel framework to create the pool’s permanent structural shell.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">This phase creates the strength, shape and structural integrity of the pool. Proper application and curing are critical to long-term performance.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-hourglass-half text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">9</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Curing</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The new pool shell is allowed to cure properly before the finishing phases continue.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Curing allows the concrete to develop strength and helps create a durable shell designed to last for decades.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-10.jpg" alt="Raised spa with waterline tile and coping" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">10</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Tile, Coping &amp; Water Features</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Waterline tile, coping, raised walls, spas, waterfalls, sheers and other architectural details are installed.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">These finishes protect the pool’s edges and waterline while establishing the overall style and character of the project.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-11.jpg" alt="New pool equipment on site" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">11</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Equipment Installation</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The pump, filter, sanitizer, heater, automation system and other selected equipment are installed and connected.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">Properly sized and installed equipment keeps the water circulating, filtered, sanitized and comfortable while improving energy efficiency.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-12.jpg" alt="Pool deck formed and reinforced before the pour" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">12</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Decking &amp; Outdoor Living Features</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The surrounding pool deck is constructed using pavers, travertine, concrete or another selected finish. Additional features such as steps, retaining walls and patios are completed during this phase.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">A properly constructed deck provides safe access, manages drainage and connects the pool to the rest of your outdoor living space.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <div class="absolute inset-0 step-pattern flex items-center justify-center">
+                        <i class="fa-solid fa-paint-roller text-6xl text-gold/80 transform transition duration-500 group-hover:scale-110"></i>
+                    </div>
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">13</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Interior Finish</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The selected plaster, quartz or pebble finish is applied to the inside of the pool.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">The interior finish waterproofs and protects the pool shell while determining the final water color and underwater appearance.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-14.jpg" alt="New pool filled with water" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">14</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Pool Fill &amp; Startup</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">The pool is filled with water, the equipment is activated and the water chemistry is carefully balanced.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">A professional startup protects the new interior finish, verifies proper equipment operation and prepares the pool for safe use.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="reveal group bg-dark border border-gray-800 hover:border-gold transition duration-500 rounded-sm overflow-hidden flex flex-col">
+                <div class="relative aspect-[4/3] overflow-hidden bg-black">
+                    <img src="images/process/step-15.jpg" alt="Completed pool and deck" loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transform transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 w-12 h-12 bg-gold text-black rounded-full flex items-center justify-center font-extrabold text-lg shadow-lg">15</div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <h2 class="text-white font-bold uppercase tracking-wide text-lg mb-3">Final Walkthrough</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">We inspect the completed project and show you how to operate and care for your new pool and equipment.</p>
+                    <div class="mt-auto border-l-2 border-gold bg-black/40 px-4 py-3">
+                        <p class="text-gold text-xs font-bold uppercase tracking-widest mb-1">Why It Matters</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">The final walkthrough ensures everything is working correctly and gives you the information needed to enjoy and maintain your investment confidently.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="bg-gold text-black py-16 reveal">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold uppercase tracking-wide mb-4">From Concept to Completion</h2>
+            <p class="text-lg md:text-xl font-medium leading-relaxed mb-8">At Texas Pools &amp; Pavers, every phase is carefully
+                coordinated to deliver a pool that is beautiful, functional and built for long-term enjoyment.</p>
+            <p class="text-xl font-bold mb-6">Ready to transform your backyard?</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:2103742779"
+                    class="w-full sm:w-auto px-8 py-4 bg-black text-white hover:bg-dark font-bold rounded-sm uppercase tracking-wider transition"><i
+                        class="fa-solid fa-phone mr-2 text-gold"></i> Call 210-374-2779</a>
+                <a href="sms:2103742779"
+                    class="w-full sm:w-auto px-8 py-4 border-2 border-black text-black hover:bg-black hover:text-white font-bold rounded-sm uppercase tracking-wider transition"><i
+                        class="fa-solid fa-comment-sms mr-2"></i> Text Us</a>
+            </div>
+            <p class="mt-6 font-semibold">Call or text 210-374-2779 to schedule your free pool design consultation.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-dark relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
+            <div class="bg-darker p-8 md:p-14 border border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)] rounded-sm">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-white mb-3 uppercase tracking-wide">Request a Free Estimate <span
+                            class="text-gold">& Design Consultation</span></h2>
+                    <p class="text-gray-400">Connect directly with our in-house design team by calling <a
+                            href="tel:2103742779"
+                            class="text-gold font-bold hover:text-white transition">210-374-2779</a> or submitting your
+                        project details below.</p>
+                </div>
+                <form id="leadForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Full
+                                Name</label>
+                            <input type="text" name="name" required
+                                class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Phone
+                                Number</label>
+                            <input type="tel" name="phone" required
+                                class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Email
+                            Address</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm">
+                    </div>
+                    <!-- HONEYPOT FIELD (Anti-Spam) -->
+                    <div class="hidden" style="display:none;" aria-hidden="true">
+                        <label>Don't fill this out if you're human:</label>
+                        <input type="text" name="botcheck" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Project
+                            Vision</label>
+                        <textarea name="message" rows="5" required
+                            class="w-full bg-dark border border-gray-700 text-white px-4 py-4 focus:outline-none focus:border-gold transition rounded-sm"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-gold hover:bg-goldHover text-black font-extrabold py-5 rounded-sm text-lg transition uppercase tracking-widest shadow-lg">Get
+                        My Free Estimate</button>
+                    <div id="formStatus" class="hidden mt-4 text-center font-bold text-lg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Texas Pools <span
+                            class="text-gold">and Pavers</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">Quality That Remains After the Price Is Forgotten. Locally
+                        trusted experts in luxury outdoor living, turnkey pool construction, and architectural remodels.
+                    </p>
+                    <p class="text-gray-400 text-sm">Owner: Martin Gonzalez</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="tel:2103742779" class="hover:text-gold transition"><i
+                                    class="fa-solid fa-phone w-5 text-gold"></i> 210-374-2779</a></li>
+                        <li><a href="mailto:texaspaverspatios@gmail.com" class="hover:text-gold transition"><i
+                                    class="fa-solid fa-envelope w-5 text-gold"></i> texaspaverspatios@gmail.com</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61560989897082&mibextid=LQQJ4d"
+                                target="_blank" rel="noopener noreferrer" class="hover:text-gold transition"><i
+                                    class="fa-brands fa-facebook w-5 text-[#1877F2]"></i> Follow us on Facebook</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 uppercase">Proudly Servicing</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">San Antonio, Helotes, Boerne, Stone Oak, Schertz,
+                        Converse, Cibolo, New Braunfels, and Live Oak.</p>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+                <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+                    <p>© 2026 Texas Pools and Pavers. All Rights Reserved.</p>
+                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-2 md:mt-0">
+                        <a href="meet-the-owner.html" class="hover:text-gold transition">Meet the Owner</a>
+                        <a href="careers.html" class="hover:text-gold transition">Careers</a>
+                        <a href="privacy.html" class="hover:text-gold transition">Privacy Policy</a>
+                        <a href="terms.html" class="hover:text-gold transition">Terms & Conditions</a>
+                    </div>
+                </div>
+                <p class="mt-4 md:mt-0">Designed & Engineered by <a href="https://prosynctech.dev" target="_blank"
+                        rel="noopener noreferrer" class="text-gold hover:text-white transition font-semibold">ProSync
+                        Tech Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+        }
+
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+
+            // HONEYPOT CHECK: If the hidden field is filled, silently reject it
+            if (form.botcheck.value !== "") {
+                form.reset();
+                return;
+            }
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const statusDiv = document.getElementById('formStatus');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+            statusDiv.classList.add('hidden');
+            const formData = { name: form.name.value, phone: form.phone.value, email: form.email.value, message: form.message.value, botcheck: form.botcheck.value };
+            try {
+                const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
+                if (response.ok) {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-check mr-2"></i> Success! Your request has been sent.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-green-500';
+                    form.reset();
+                } else {
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Something went wrong. Please try again.';
+                    statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-2"></i> Unable to connect. Please try again.';
+                statusDiv.className = 'mt-6 text-center font-bold text-lg text-red-500';
+            } finally { submitBtn.innerHTML = 'Get My Free Estimate'; submitBtn.disabled = false; }
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                if (reveals[i].getBoundingClientRect().top < window.innerHeight - 100) reveals[i].classList.add("active");
+            }
+        }
+        window.addEventListener("scroll", reveal); reveal();
+    </script>
+
+    <!-- Admazed CRM Chatbot Widget -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="6aa7f547c8d7749cb056e5e3"></script>
+
+</body>
+
+</html>
